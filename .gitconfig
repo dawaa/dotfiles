@@ -1,0 +1,9 @@
+[user]
+    name = DAwaa
+    email = alejandro.andersson@hyperisland.se
+[core]
+    excludesfile = ~/.gitignore_global
+    editor = /usr/bin/vim
+    ignorecase = true
+[push]
+    default = simple

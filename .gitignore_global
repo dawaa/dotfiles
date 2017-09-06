@@ -1,0 +1,9 @@
+*~
+*.swp
+*.swo
+.*.sw*
+.DS_Store
+*.sass-cache*
+node_modules/
+.sass-cache
+.sash-cache/*
