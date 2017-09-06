@@ -1,28 +1,28 @@
-"source $PWD/config/init.vim
-"source $PWD/config/plugins.vim
-"source $PWD/config/leader.vim
-"source $PWD/config/autocomplete.vim
-"
-"" Functions
-"source $PWD/functions/searchwholeword.vim
-"
-"" General stuff
-"source $PWD/config/settings.vim
-"
-"" Interface
-"source $PWD/config/airline.vim
-"source $PWD/config/colorscheme.vim
-"
-"" Plugin settings
-"source $PWD/config/ctrlp.vim
-"source $PWD/config/nerdtree.vim
-"source $PWD/config/ultisnips.vim
-"" source $HOME/.vim/config/youcompleteme.vim
-"
-"" GUI
-"source $PWD/config/tabline.vim
-"source $PWD/config/php.vim
-"source $PWD/config/javascript.vim
-"
-"" Mappings
-"source $PWD/config/mappings.vim
+source $HOME/.vim/config/init.vim
+source $HOME/.vim/config/plugins.vim
+source $HOME/.vim/config/leader.vim
+source $HOME/.vim/config/autocomplete.vim
+
+" Functions
+source $HOME/.vim/functions/searchwholeword.vim
+
+" General stuff
+source $HOME/.vim/config/settings.vim
+
+" Interface
+source $HOME/.vim/config/airline.vim
+source $HOME/.vim/config/colorscheme.vim
+
+" Plugin settings
+source $HOME/.vim/config/ctrlp.vim
+source $HOME/.vim/config/nerdtree.vim
+source $HOME/.vim/config/ultisnips.vim
+" source $HOME/.vim/config/youcompleteme.vim
+
+" GUI
+source $HOME/.vim/config/tabline.vim
+source $HOME/.vim/config/php.vim
+source $HOME/.vim/config/javascript.vim
+
+" Mappings
+source $HOME/.vim/config/mappings.vim

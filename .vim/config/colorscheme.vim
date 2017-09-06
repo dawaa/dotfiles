@@ -3,7 +3,7 @@ set t_Co=256
 " set term=screen-256color
 
 " Enable color scheme and syntax
-colo gruvbox
+" colo gruvbox
 syntax on
 
 " set gruvbox dark theme
