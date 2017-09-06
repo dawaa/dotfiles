@@ -1,0 +1,38 @@
+snippet fun "public function() {}"
+${1:public} function($2) {
+    $3
+}
+endsnippet
+
+snippet vd "var_dump" b
+var_dump($1);
+endsnippet
+
+snippet preprint "preprint" b
+echo '<pre>';
+echo print_r($1);
+echo '</pre>';
+endsnippet
+
+snippet vdd "var_dump die" b
+var_dump($1);
+die();
+endsnippet
+
+snippet doc "doc PHP" b
+/**
+ * ${1:...documentation}
+ */
+endsnippet
+
+snippet ve "var_dump echo divs" b
+echo '<div>' . var_dump($1) . '</div>';
+endsnippet
+
+snippet => "array item" b
+'$1' => '$2'${3:,}
+endsnippet
+
+snippet pr "print_r" b
+print_r($1);
+endsnippet
