@@ -1,0 +1,22 @@
+#!/bin/bash
+base16path=~/.config/base16-shell/scripts
+
+if [ ! -d "$base16path" ]
+then
+    echo "Couldn't find any base16-shell scripts under following path:"
+    echo "===> $base16path"
+    exit
+fi
+
+for script in $base16path/base16*.sh; do
+  script_name=${script##*/}
+  script_name=${script_name%.sh}
+  theme=${script_name#*-}
+  func_name="base16_${theme}"
+  echo base_$theme
+  # echo "alias $func_name=\"_base16 \\\"$script\\\" $theme\""
+done;
+
+read decision
+
+echo "decision was: $decision"

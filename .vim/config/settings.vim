@@ -1,7 +1,6 @@
 " Have VIM auto reload edited files
 set autoread
 
-
 " Set LineNr colors
 set cursorline
 
@@ -21,9 +20,5 @@ set numberwidth=6
 " Enable list command
 set listchars=nbsp:†,eol:$,tab:>-,trail:~,extends:>,precedes:<
 
-
-" TMUX copy paste, will it work?
+" TMUX copy paste
 set clipboard=unnamed
-
-" Enable JSDoc syntax highlight
-let g:javascript_plugin_jsdoc = 1

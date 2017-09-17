@@ -8,12 +8,20 @@ call vundle#begin()
     Plugin 'scrooloose/nerdtree'
     Plugin 'jistr/vim-nerdtree-tabs'
     Plugin 'easymotion/vim-easymotion'
-    Plugin 'ctrlpvim/ctrlp.vim'
     Plugin 'tpope/vim-surround'
     Plugin 'jiangmiao/auto-pairs'
     Plugin 'digitaltoad/vim-pug'
     Plugin 'mileszs/ack.vim'
     Plugin 'ntpeters/vim-better-whitespace'
+
+    " fuzzy finders
+    " Plugin 'ctrlpvim/ctrlp.vim'
+
+    " These two are coupled together
+    Plugin 'junegunn/fzf'
+    Plugin 'junegunn/fzf.vim'
+    Plugin 'tpope/vim-dispatch' " Useful to open quick tasks with
+
 
     " Javascript with JSDoc
     Plugin 'pangloss/vim-javascript'

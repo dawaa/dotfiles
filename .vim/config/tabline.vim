@@ -33,7 +33,7 @@ if exists("+showtabline")
             let j = j + 1
         endwhile
 
-        " Check while i is under last tab page nr
+        " Check while `i` is under last tab page nr
         while i <= tabpagenr('$')
             let buflist = tabpagebuflist(i)
             let winnr = tabpagewinnr(i)
@@ -48,15 +48,10 @@ if exists("+showtabline")
             let fileBuf = bufname(buflist[winnr - 1])
             let file    = fnamemodify(fileBuf, ':p:t')
 
+            " If we a filename already in memory expand the diff
             if index( dup, file ) != -1
                 let file = fnamemodify(fileBuf, ':r')
             endif
-
-            " if i == t
-            "     let file = fnamemodify(file, ':r')
-            " else
-            "     let file = fnamemodify(file, ':p:t')
-            " endif
 
             if file == ''
                 let file = '[No Name]'
@@ -68,6 +63,7 @@ if exists("+showtabline")
         let s .= (tabpagenr('$') > 1 ? '%999XX' : 'X')
         return s
     endfunction
+
     " Show tabline always
     set stal=2
     set tabline=%!MyTabLine()

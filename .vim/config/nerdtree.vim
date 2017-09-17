@@ -4,8 +4,9 @@ set guioptions-=r
 
 " NerdTree
 let NERDTreeStatusline="%{matchstr(getline('.'), '\\s\\zs\\w\\(.*\\)')}"
-let NERDTreeIgnore=['.DS_Store', '\.swp$']
+let NERDTreeIgnore=['.DS_Store', '\.swp$', '\.swo$']
 let NERDTreeShowLineNumbers=1
 let NERDTreeWinSize=40
+let NERDTreeShowHidden=1
 
 autocmd vimenter * NERDTree

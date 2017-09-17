@@ -18,9 +18,9 @@ set cc=80
 " Set line colors upon VimEnter
 autocmd VimEnter * highlight LineNr guifg=#68899a guibg=#263238
 autocmd VimEnter * highlight CursorLineNr guifg=#FFFFFF guibg=#263238 gui=NONE
+" autocmd VimEnter * match Error /\%xA0/
 
 if filereadable( expand( "~/.vimrc_background" ) )
     let base16colorspace=256
     source ~/.vimrc_background
 endif
-

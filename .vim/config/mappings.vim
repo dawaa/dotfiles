@@ -16,6 +16,9 @@ nmap <leader><leader>F /\c
 nmap <leader><leader>l :set list<CR>
 nmap <leader><leader>L :set nolist<CR>
 
+" Reload vimrc
+nnoremap <leader>R :so ~/.vimrc<CR>
+
 " Last active tab
 let g:lasttab = 1
 nmap <leader><leader><Space> :exe "tabn ".g:lasttab<CR>
@@ -35,12 +38,17 @@ nmap <silent> <A-Up> <C-w> k<CR>
 nmap <silent> <A-Down> <C-w> j<CR>
 nmap <silent> <A-Left> :wincmd h<CR>
 nmap <silent> <A-Right> :wincmd l<CR>
+
 " Quick pane-switching in Vim
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+" nnoremap K k
+inoremap å j
 inoremap <silent> <Plug>snipMateNextOrTrigger <C-R>=snipMate#TriggerSnippet()
-" Operator-pending mappings
-onoremap f_( f(ci(
 
+" Window resizing
+" nnoremap <c-left> 5<c-w>>
+" nnoremap <c-right> 5<c-w><
+nnoremap <D-k> k
