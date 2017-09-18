@@ -2,7 +2,7 @@
 set guioptions-=e
 
 " Change tabline settings
-if exists("+showtabline")
+if exists( "+showtabline" )
     function! MyTabLine()
         let s = ''
         let t = tabpagenr()

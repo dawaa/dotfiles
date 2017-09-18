@@ -52,3 +52,22 @@ inoremap <silent> <Plug>snipMateNextOrTrigger <C-R>=snipMate#TriggerSnippet()
 " nnoremap <c-left> 5<c-w>>
 " nnoremap <c-right> 5<c-w><
 nnoremap <D-k> k
+
+" Clean trailing whitespace
+nnoremap <leader>= :%s/\s\+$//<cr>:let @/=''<cr>
+nnoremap <leader><leader>= :%s/ / /<cr>
+
+" Sourcing
+vnoremap <leader>S y:execute @@<cr>
+
+" Open current dir in Finder
+nnoremap <leader>O :!open .<cr>
+" nnoremap <leader>o :!/Applications/Sublime\ Text\ \(3103\).app/Contents/MacOS/Sublime\ Text .<cr>
+
+" Add and remove spaces inbetween () []
+" nnoremap <leader>a :%s/\m(\@<=["']/ \0/g | silent! %s/\m["'])\@=/\0 /g'"]'"])<cr>
+" nnoremap <leader>a :silent! %s/\m(\@<=["']/ \0/g | silent! %s/\m["'])\@=/\0 /g'"]'"])
+" %s/\m(\@<=["']/ \0/g | silent! %s/\m["'])\@=/\0 /g'"]'"])
+
+command! InsertSpaces silent! %s/\m(\@<=["']/ \0/g | silent! %s/\m["'])\@a=/\0 /g
+nnoremap <leader>a :InsertSpaces<cr>

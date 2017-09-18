@@ -5,6 +5,7 @@ source $HOME/.vim/config/autocomplete.vim
 
 " Auto commands
 source $HOME/.vim/autocommands/nbsp.vim
+source $HOME/.vim/autocommands/nerdtree.vim
 source $HOME/.vim/autocommands/javascript/findUnusedImports.vim
 
 " Functions
