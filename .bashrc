@@ -29,7 +29,8 @@ is_in_git_repo() {
 fzfGitFiles() {
     is_in_git_repo &&
         git -c color.status=always status --short |
-        fzf -m --ansi
+        fzf -m --ansi --nth 2..,.. |
+        awk '{print $2}'
 }
 export -f fzfGitFiles
 
@@ -38,13 +39,15 @@ fzfGitBranches() {
         git branch -a -vv --color=always |
         grep -v '/HEAD\s' |
         fzf --ansi --multi --tac |
-        sed 's/^..//'
+        sed 's/^..//' |
+        awk '{print $1}' |
+        sed 's#^remotes/[^/]*/##'
 }
 export -f fzfGitBranches
 
 
 bind '"\C-g\C-f": "$(fzfGitFiles)\e\C-e"'
-bind '"\C-g\C-b": "$(fzfGitBranches)\e\C-e"'
+bind '"\C-g\C-g": "$(fzfGitBranches)\e\C-e"'
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 BASE16_SHELL=$HOME/.config/base16-shell/
