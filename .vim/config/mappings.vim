@@ -55,6 +55,7 @@ nnoremap <D-k> k
 
 " Clean trailing whitespace
 nnoremap <leader>= :%s/\s\+$//<cr>:let @/=''<cr>
+" Let the weird space be!!!
 nnoremap <leader><leader>= :%s/ / /<cr>
 
 " Sourcing
