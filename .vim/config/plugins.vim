@@ -44,5 +44,6 @@ call vundle#begin()
     Plugin 'chriskempson/base16-vim'
 call vundle#end()
 
+" This allows for locally setting options per file types
 filetype plugin indent on
 syntax on
