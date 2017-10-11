@@ -45,13 +45,15 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 " nnoremap K k
-inoremap å j
+silent! iunmap <buffer> å
+silent! iunmap å
 inoremap <silent> <Plug>snipMateNextOrTrigger <C-R>=snipMate#TriggerSnippet()
 
 " Window resizing
 " nnoremap <c-left> 5<c-w>>
 " nnoremap <c-right> 5<c-w><
-nnoremap <D-k> k
+" unmap <D-k> k
+map <D-Right> j
 
 " Clean trailing whitespace
 nnoremap <leader>= :%s/\s\+$//<cr>:let @/=''<cr>
