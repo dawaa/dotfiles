@@ -6,6 +6,7 @@ call vundle#begin()
     Plugin 'tpope/vim-fugitive'
     Plugin 'vim-airline/vim-airline'
     Plugin 'scrooloose/nerdtree'
+    " Plugin 'vim-syntastic/syntastic'
     Plugin 'jistr/vim-nerdtree-tabs'
     Plugin 'easymotion/vim-easymotion'
     Plugin 'tpope/vim-surround'
