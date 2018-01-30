@@ -6,7 +6,7 @@ call vundle#begin()
     Plugin 'tpope/vim-fugitive'
     Plugin 'vim-airline/vim-airline'
     Plugin 'scrooloose/nerdtree'
-    " Plugin 'vim-syntastic/syntastic'
+    Plugin 'vim-syntastic/syntastic'
     Plugin 'jistr/vim-nerdtree-tabs'
     Plugin 'easymotion/vim-easymotion'
     Plugin 'tpope/vim-surround'
@@ -23,12 +23,22 @@ call vundle#begin()
     Plugin 'junegunn/fzf.vim'
     Plugin 'tpope/vim-dispatch' " Useful to open quick tasks with
 
+    " YAML indent
+    Plugin 'martin-svk/vim-yaml'
+
+    " TypeScript syntax
+    Plugin 'Quramy/tsuquyomi'
+    Plugin 'leafgarland/typescript-vim'
+    " Plugin 'HerringtonDarkholme/yats.vim'
+
+    " TypeScript React syntax
+    Plugin 'ianks/vim-tsx'
 
     " Javascript with JSDoc
     Plugin 'pangloss/vim-javascript'
 
     " Nice syntax highlightning for react
-    Plugin 'mxw/vim-jsx'
+    Plugin 'mxw/vim-jsx' " dependency: pangloss/vim-javascript
 
     " UltiSnips
     Plugin 'SirVer/ultisnips'

@@ -3,6 +3,12 @@ nnoremap <leader>F :FZF!<cr>
 nnoremap <leader><Space>f :Ag<cr>
 nnoremap <leader><Space>F :Ag!<cr>
 
+" [Buffers] Jump to the existing window if possible
+let g:fzf_buffers_jump = 1
+
+" [Tags] Command to generate tags file
+let g:fzf_tags_command = 'ctags -R'
+
 " Augmenting Ag command using fzf#vim#with_preview function
 " "   * fzf#vim#with_preview([[options], preview window, [toggle keys...]])
 " "     * For syntax-highlighting, Ruby and any of the following tools are

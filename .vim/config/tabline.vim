@@ -50,7 +50,20 @@ if exists( "+showtabline" )
 
             " If we a filename already in memory expand the diff
             if index( dup, file ) != -1
-                let file = fnamemodify(fileBuf, ':r')
+                " Get full path to file with extension
+                let file = fnamemodify(fileBuf, ':p:.')
+
+                " Split up path by '/' because we have duplicate somewhere
+                let arrFilePath = split(file, '/')
+
+                " Grab the 2nd last item and to the end
+                let lastTwoPaths = arrFilePath[-2:]
+
+                " Join together the 2 items we retrieved to a string
+                let newFileName = join( lastTwoPaths, '/' )
+
+                " Make it our new filename
+                let file = newFileName
             endif
 
             if file == ''

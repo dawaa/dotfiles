@@ -74,3 +74,6 @@ nnoremap <leader>O :!open .<cr>
 
 command! InsertSpaces silent! %s/\m(\@<=["']/ \0/g | silent! %s/\m["'])\@a=/\0 /g
 nnoremap <leader>a :InsertSpaces<cr>
+
+" Set up tag find, because it was apparently not set
+nnoremap <leader>x <C-]>
