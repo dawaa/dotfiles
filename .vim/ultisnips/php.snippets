@@ -10,7 +10,7 @@ endsnippet
 
 snippet preprint "preprint" b
 echo '<pre>';
-echo print_r($1);
+echo print_r( $1, true );
 echo '</pre>';
 endsnippet
 
@@ -35,4 +35,8 @@ endsnippet
 
 snippet pr "print_r" b
 print_r($1);
+endsnippet
+
+snippet el "echo line" b
+echo "<div>" . $1 ."</div>";
 endsnippet
