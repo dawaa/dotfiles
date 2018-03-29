@@ -56,14 +56,18 @@ if exists( "+showtabline" )
                 " Split up path by '/' because we have duplicate somewhere
                 let arrFilePath = split(file, '/')
 
-                " Grab the 2nd last item and to the end
-                let lastTwoPaths = arrFilePath[-2:]
+                if len( arrFilePath ) == 1
+                    let file = arrFilePath[0]
+                else
+                    " Grab the 2nd last item and to the end
+                    let lastTwoPaths = arrFilePath[-2:]
 
-                " Join together the 2 items we retrieved to a string
-                let newFileName = join( lastTwoPaths, '/' )
+                    " Join together the 2 items we retrieved to a string
+                    let newFileName = join( lastTwoPaths, '/' )
 
-                " Make it our new filename
-                let file = newFileName
+                    " Make it our new filename
+                    let file = newFileName
+                endif
             endif
 
             if file == ''
