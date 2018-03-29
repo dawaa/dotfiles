@@ -36,6 +36,7 @@ call vundle#begin()
 
     " Javascript with JSDoc
     Plugin 'pangloss/vim-javascript'
+    " Plugin 'othree/es.next.syntax.vim'
 
     " Nice syntax highlightning for react
     Plugin 'mxw/vim-jsx' " dependency: pangloss/vim-javascript
