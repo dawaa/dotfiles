@@ -21,7 +21,7 @@ call vundle#begin()
     " These two are coupled together
     Plugin 'junegunn/fzf'
     Plugin 'junegunn/fzf.vim'
-    Plugin 'tpope/vim-dispatch' " Useful to open quick tasks with
+    " Plugin 'tpope/vim-dispatch' " Useful to open quick tasks with
 
     " YAML indent
     Plugin 'martin-svk/vim-yaml'

@@ -14,7 +14,7 @@ let g:UltiSnipsSnippetDirectories = [$HOME . '/.vim/ultisnips']
 let g:UltiSnipsEditSplit = 'vertical'
 
 " Let it know which python version we be using
-let g:UltiSnipsUsePythonVersion = 2
+let g:UltiSnipsUsePythonVersion = 3
 
 " Open edit quick n cool
 nmap <leader>E :UltiSnipsEdit<cr>
