@@ -71,3 +71,6 @@ nnoremap <leader>O :!open .<cr>
 
 " Set up tag find, because it was apparently not set
 nnoremap <leader>x <C-]>
+
+" Map search to use haya14busa/incsearch.vim
+map ; <Plug>(incsearch-forward)
