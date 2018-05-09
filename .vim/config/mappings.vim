@@ -39,14 +39,17 @@ nmap <silent> <A-Down> <C-w> j<CR>
 nmap <silent> <A-Left> :wincmd h<CR>
 nmap <silent> <A-Right> :wincmd l<CR>
 
+
 " Quick pane-switching in Vim
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
-" nnoremap K k
-silent! iunmap <buffer> å
-silent! iunmap å
+nnoremap K <Nop>
+
+" unmaps å
+let g:AutoPairsShortcutFastWrap=''
+
 inoremap <silent> <Plug>snipMateNextOrTrigger <C-R>=snipMate#TriggerSnippet()
 
 " Window resizing
@@ -65,15 +68,6 @@ vnoremap <leader>S y:execute @@<cr>
 
 " Open current dir in Finder
 nnoremap <leader>O :!open .<cr>
-" nnoremap <leader>o :!/Applications/Sublime\ Text\ \(3103\).app/Contents/MacOS/Sublime\ Text .<cr>
-
-" Add and remove spaces inbetween () []
-" nnoremap <leader>a :%s/\m(\@<=["']/ \0/g | silent! %s/\m["'])\@=/\0 /g'"]'"])<cr>
-" nnoremap <leader>a :silent! %s/\m(\@<=["']/ \0/g | silent! %s/\m["'])\@=/\0 /g'"]'"])
-" %s/\m(\@<=["']/ \0/g | silent! %s/\m["'])\@=/\0 /g'"]'"])
-
-command! InsertSpaces silent! %s/\m(\@<=["']/ \0/g | silent! %s/\m["'])\@a=/\0 /g
-nnoremap <leader>a :InsertSpaces<cr>
 
 " Set up tag find, because it was apparently not set
 nnoremap <leader>x <C-]>
