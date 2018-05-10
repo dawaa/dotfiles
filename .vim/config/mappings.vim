@@ -9,7 +9,7 @@ map <leader>vrc :tabe ~/.vimrc<cr>
 
 " Fast search
 nmap <leader><leader>f /
-" Insensitive
+" Insensitive search
 nmap <leader><leader>F /\c
 
 " Enable / disable transparency
@@ -31,6 +31,8 @@ nmap tn :tabn<CR>
 vmap tn :tabn<CR>
 " Move around tabs
 map <leader>tm :tabmove
+
+
 " NerdTree toggle
 map <C-n> :NERDTreeTabsToggle<CR>
 " ?
@@ -45,18 +47,14 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+" Disable the word-lookup functionality
 nnoremap K <Nop>
 
-" unmaps å
+" Unmaps å to call an Auto Pair function
 let g:AutoPairsShortcutFastWrap=''
 
 inoremap <silent> <Plug>snipMateNextOrTrigger <C-R>=snipMate#TriggerSnippet()
-
-" Window resizing
-" nnoremap <c-left> 5<c-w>>
-" nnoremap <c-right> 5<c-w><
-" unmap <D-k> k
-map <D-Right> j
 
 " Clean trailing whitespace
 nnoremap <leader>= :%s/\s\+$//<cr>:let @/=''<cr>
