@@ -15,6 +15,7 @@ call vundle#begin()
     Plugin 'mileszs/ack.vim'
     Plugin 'ntpeters/vim-better-whitespace'
     Plugin 'haya14busa/incsearch.vim'
+    Plugin 'junegunn/vim-easy-align'
 
     " fuzzy finders
     " Plugin 'ctrlpvim/ctrlp.vim'
