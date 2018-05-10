@@ -74,3 +74,7 @@ nnoremap <leader>x <C-]>
 
 " Map search to use haya14busa/incsearch.vim
 map ; <Plug>(incsearch-forward)
+map / /
+
+" Disables the possibility of typing a 'non-breaking space'
+imap <A-Space> <Space>
