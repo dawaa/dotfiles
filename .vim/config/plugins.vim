@@ -46,6 +46,9 @@ call vundle#begin()
     " UltiSnips
     Plugin 'SirVer/ultisnips'
 
+    " LiveScript
+    Plugin 'gkz/vim-ls'
+
     " Color Schemes
     Plugin 'mkarmona/colorsbox'
     Plugin 'easysid/mod8.vim'

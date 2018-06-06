@@ -7,7 +7,7 @@ nnoremap <leader><Space>F :Ag!<cr>
 let g:fzf_buffers_jump = 1
 
 " [Tags] Command to generate tags file
-let g:fzf_tags_command = 'ctags -R'
+" let g:fzf_tags_command = 'ctags -R'
 
 " Augmenting Ag command using fzf#vim#with_preview function
 " "   * fzf#vim#with_preview([[options], preview window, [toggle keys...]])

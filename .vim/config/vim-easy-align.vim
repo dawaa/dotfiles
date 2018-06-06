@@ -4,5 +4,5 @@ xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
 
-nmap <leader>a: gaip<Right>:
-vmap <leader>af gaip<C-X>
+vmap <leader>.: gaip<Right>:
+vmap <leader>.f gaip<C-X>from
