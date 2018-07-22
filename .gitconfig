@@ -1,9 +1,12 @@
 [user]
-    name = DAwaa
-    email = alejandro.andersson@hyperisland.se
+    name = Alejandro Andersson
+    email = alejandro@thelad.io
 [core]
     excludesfile = ~/.gitignore_global
     editor = /usr/bin/vim
     ignorecase = true
 [push]
+    followTags = true
     default = simple
+[rebase]
+    autosquash = true
