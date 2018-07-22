@@ -5,6 +5,12 @@ export MAMP_PHP=/Applications/MAMP/bin/php/php7.1.1/bin
 export PATH=~/.composer/vendor/bin:$PATH
 
 alias h='cd'
+alias g='git'
+alias gs='git status'
+alias gcm='git checkout master'
+alias gcl='git checkout -'
+alias gri='git rebase -i'
+alias grinas='git rebase -i --no-autosquash'
 alias htdocs='cd /Applications/MAMP/htdocs'
 alias mamp='cd /Applications/MAMP'
 alias lsd='ls -ld .*?'
@@ -23,3 +29,6 @@ export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/opt/curl/bin:$PATH"
 export PATH="$PATH:$MAMP_SQL:$MAMP_PHP"
 export PHP_AUTOCONF=/usr/local/bin/autoconf
+
+# To activate nodenv upon each new shell instantiation
+eval "$(nodenv init -)"
