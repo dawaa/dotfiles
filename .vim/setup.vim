@@ -5,14 +5,16 @@ source $HOME/.vim/config/autocomplete.vim
 
 " Auto commands
 source $HOME/.vim/autocommands/nbsp.vim
-source $HOME/.vim/autocommands/nerdtree.vim
-source $HOME/.vim/autocommands/javascript/findUnusedImports.vim
+" source $HOME/.vim/autocommands/javascript/findUnusedImports.vim
 
 " Functions
 source $HOME/.vim/functions/searchwholeword.vim
 
 " General stuff
 source $HOME/.vim/config/settings.vim
+
+" Override
+source $HOME/.vim/config/ag.vim
 
 " Interface
 source $HOME/.vim/config/airline.vim
@@ -33,3 +35,4 @@ source $HOME/.vim/config/javascript.vim
 
 " Mappings
 source $HOME/.vim/config/mappings.vim
+source $HOME/.vim/autocommands/nerdtree.vim
