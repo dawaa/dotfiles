@@ -26,6 +26,7 @@ source $HOME/.vim/config/fzf.vim
 source $HOME/.vim/config/nerdtree.vim
 source $HOME/.vim/config/ultisnips.vim
 source $HOME/.vim/config/syntastic.vim
+source $HOME/.vim/config/nerdcommenter.vim
 " source $HOME/.vim/config/youcompleteme.vim
 
 " GUI

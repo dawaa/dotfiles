@@ -76,3 +76,6 @@ map / /
 
 " Disables the possibility of typing a 'non-breaking space'
 imap <A-Space> <Space>
+
+" Toggle Syntastic
+nnoremap <leader>lt :SyntasticToggleMode<cr>
