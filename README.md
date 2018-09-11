@@ -44,3 +44,25 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 ```
 
+
+### Search using Ag
+
+#### Find trailing whitespace
+
+```
+ag --no-multiline \\s+$
+
+# Deal with all the findings
+cfdo %s/\v\s+$//ge | update
+```
+
+
+
+#### Find whitespace of death
+
+```
+ag --no-multiline  
+
+# Deal with all the findings
+cfdo %s/ / /ge | update
+```
