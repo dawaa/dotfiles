@@ -30,6 +30,10 @@ alias lgrep='lsGrep'
 alias ps-on-port='psOnPort'
 # alias skype='open -na /Applications/Skype.app --args -DataPath /Users/$(whoami)/Library/Application\ Support/Skype2'
 
+# Override OSX vim, even when future updates occur
+alias vi=/usr/local/bin/vim
+alias vim=/usr/local/bin/vim
+
 PS1="[\u] \[\e[1;37m\]\W\[\e[0m\] "
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
