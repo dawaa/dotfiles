@@ -166,6 +166,14 @@ goToBackupOriginalBranch() {
     fi
 }
 
+cs() {
+    if [ "$BASE16_SHELL" ]; then
+        eval $(ls $BASE16_SHELL/scripts | sed 's/\..*$//g' | sed 's/-/_/' | fzf)
+    else
+        echo "You seem to be missing the ENV variable \$BASE16_SHELL."
+    fi
+}
+
 # [ -n "$BASH" ] && complete -F fzfDockerContainers -o default -o bashdefault doge
 
 # re-wrote the script above
