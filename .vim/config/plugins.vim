@@ -60,6 +60,7 @@ call vundle#begin()
     Plugin 'morhetz/gruvbox'
     Plugin 'rhysd/vim-color-spring-night'
     Plugin 'chriskempson/base16-vim'
+    Plugin 'KKPMW/sacredforest-vim'
 call vundle#end()
 
 " This allows for locally setting options per file types
