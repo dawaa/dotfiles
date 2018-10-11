@@ -56,8 +56,8 @@ I use the following key mappings to make my life easier
 | ctrl-b + k     | cmd+k     | 0x02 0x6B | Moves to pane above |
 | ctrl-b + j     | cmd+j     | 0x02 0x6A | Moves to pane below |
 | ctrl-b + h     | cmd+h     | 0x02 0x68 | Moves to left pane |
-| ctrl-b + space | cmd+s     | 0x02 0x52 | Switch to last pane |
-| ctrl-b + R     | cmd+r     | 0x02 0x3B | Re-runs last command in previous pane |
+| ctrl-b + r     | cmd+r     | 0x02 0x52 | Re-runs last command in previous pane |
+| ctrl-b + ;     | cmd+s     | 0x02 0x3B | Switch to last pane |
 
 ### Search using Ag
 
