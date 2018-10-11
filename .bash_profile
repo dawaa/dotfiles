@@ -41,6 +41,7 @@ export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/opt/curl/bin:$PATH"
 export PATH="$PATH:$MAMP_SQL:$MAMP_PHP"
 export PHP_AUTOCONF=/usr/local/bin/autoconf
+export EDITOR=vim
 
 # To activate nodenv upon each new shell instantiation
 eval "$(nodenv init -)"
