@@ -13,6 +13,9 @@ set autoindent
 set copyindent
 set smarttab
 
+" Force the cursor onto a new line after 80 characters
+set textwidth=80
+
 " Enable line numbers
 set nu
 set numberwidth=6
