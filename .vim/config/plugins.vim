@@ -3,7 +3,6 @@ call vundle#begin()
     Plugin 'VundleVim/Vundle.vim'
 
     " Plugins
-    Plugin 'tpope/vim-fugitive'
     Plugin 'vim-airline/vim-airline'
     Plugin 'scrooloose/nerdtree'
     Plugin 'vim-syntastic/syntastic'
@@ -19,12 +18,9 @@ call vundle#begin()
     Plugin 'scrooloose/nerdcommenter'
 
     " fuzzy finders
-    " Plugin 'ctrlpvim/ctrlp.vim'
-
-    " These two are coupled together
     Plugin 'junegunn/fzf'
     Plugin 'junegunn/fzf.vim'
-    " Plugin 'tpope/vim-dispatch' " Useful to open quick tasks with
+    " Plugin 'ctrlpvim/ctrlp.vim'
 
     " YAML indent
     Plugin 'martin-svk/vim-yaml'
@@ -51,16 +47,8 @@ call vundle#begin()
     Plugin 'gkz/vim-ls'
 
     " Color Schemes
-    Plugin 'mkarmona/colorsbox'
-    Plugin 'easysid/mod8.vim'
-    Plugin 'gwutz/vim-materialtheme'
-    Plugin 'w0ng/vim-hybrid'
-    Plugin 'YorickPeterse/happy_hacking.vim'
-    Plugin 'junegunn/seoul256.vim'
-    Plugin 'morhetz/gruvbox'
-    Plugin 'rhysd/vim-color-spring-night'
     Plugin 'chriskempson/base16-vim'
-    Plugin 'KKPMW/sacredforest-vim'
+    Plugin 'rhysd/vim-color-spring-night'
 call vundle#end()
 
 " This allows for locally setting options per file types
