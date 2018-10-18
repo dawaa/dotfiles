@@ -1,0 +1,14 @@
+#!/bin/bash
+cur_dir=$(pwd)
+
+# Update .vim/ directory with everything from ~/.vim/
+cp -R ~/.vim/ $cur_dir/.vim/
+
+cp ~/.tmux.conf $cur_dir
+cp ~/.vimrc $cur_dir
+cp ~/.bashrc $cur_dir
+cp ~/.bash_profile $cur_dir
+cp ~/.vimrc_background $cur_dir
+cp ~/.gitconfig $cur_dir
+cp ~/.gitignore $cur_dir
+cp ~/.gitignore_global $cur_dir
