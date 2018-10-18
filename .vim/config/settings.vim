@@ -13,6 +13,9 @@ set autoindent
 set copyindent
 set smarttab
 
+" Make backspace work as you would expect it to
+set backspace=2
+
 " Force the cursor onto a new line after 80 characters
 set textwidth=80
 
