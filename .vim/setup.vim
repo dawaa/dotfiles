@@ -1,11 +1,8 @@
+" Core
 source $HOME/.vim/config/init.vim
 source $HOME/.vim/config/plugins.vim
 source $HOME/.vim/config/leader.vim
 source $HOME/.vim/config/autocomplete.vim
-
-" Auto commands
-source $HOME/.vim/autocommands/nbsp.vim
-" source $HOME/.vim/autocommands/javascript/findUnusedImports.vim
 
 " Functions
 source $HOME/.vim/functions/searchwholeword.vim
@@ -16,24 +13,23 @@ source $HOME/.vim/config/settings.vim
 " Override
 source $HOME/.vim/config/ag.vim
 
-" Interface
-source $HOME/.vim/config/airline.vim
-source $HOME/.vim/config/colorscheme.vim
-
 " Plugin settings
-" source $HOME/.vim/config/ctrlp.vim
-source $HOME/.vim/config/fzf.vim
-source $HOME/.vim/config/nerdtree.vim
-source $HOME/.vim/config/ultisnips.vim
-source $HOME/.vim/config/syntastic.vim
-source $HOME/.vim/config/nerdcommenter.vim
-" source $HOME/.vim/config/youcompleteme.vim
+source $HOME/.vim/config/plugins/fzf.vim
+source $HOME/.vim/config/plugins/nerdtree.vim
+source $HOME/.vim/config/plugins/ultisnips.vim
+source $HOME/.vim/config/plugins/syntastic.vim
+source $HOME/.vim/config/plugins/nerdcommenter.vim
+source $HOME/.vim/config/plugins/airline.vim
 
 " GUI
+source $HOME/.vim/config/colorscheme.vim
 source $HOME/.vim/config/tabline.vim
 source $HOME/.vim/config/php.vim
 source $HOME/.vim/config/javascript.vim
 
 " Mappings
 source $HOME/.vim/config/mappings.vim
+
+" Auto commands
+source $HOME/.vim/autocommands/nbsp.vim
 source $HOME/.vim/autocommands/nerdtree.vim
