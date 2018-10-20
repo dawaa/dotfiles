@@ -1,5 +1,3 @@
-# source ~/git-completion.bash
-
 gitBranchCopyName() {
     branchname="$1";
 
