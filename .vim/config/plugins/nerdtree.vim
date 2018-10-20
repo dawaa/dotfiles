@@ -9,4 +9,4 @@ let NERDTreeShowLineNumbers=1
 let NERDTreeWinSize=40
 let NERDTreeShowHidden=1
 
-autocmd VimEnter * if &filetype !=# 'gitcommit' | NERDTree | endif
+autocmd VimEnter * if &filetype !=# 'gitcommit' && !&diff | NERDTree | endif

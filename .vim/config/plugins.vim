@@ -49,6 +49,8 @@ call vundle#begin()
     " Color Schemes
     Plugin 'chriskempson/base16-vim'
     Plugin 'rhysd/vim-color-spring-night'
+    " When doing git diffs
+    Plugin 'cormacrelf/vim-colors-github'
 call vundle#end()
 
 " This allows for locally setting options per file types
