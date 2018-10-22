@@ -1,21 +1,39 @@
-# Dotfiles
+Dotfiles
+========================
 
-### Hardlinking directories in OSX
-With the help of this git repo (`https://github.com/selkhateeb/hardlink`) we
-can hardlink directories, making actual directories source-able to vim
+## Table of Contents
+* [Vim](#vim)
+  * [Plugin manager](#plugin-manager)
+    * [To install Vundle](#to-install-vundle)
+    * [Install plugins](#install-plugins)
+* [Karabiner Elements](#karabiner-elements)
+* [Color schemes](#color-schemes)
+  * [To install base16-shell](#to-install-base16-shell)
+* [iTerm2 key-mappings](#iterm2-key-mappings)
+  * [Switching between panes](#switching-between-panes)
+* [Search using Ag](#search-using-ag)
+  * [Find trailing whitespaces](#find-trailing-whitespaces)
+  * [Find whitespaces of death](#find-whitespaces-of-death)
+* [~~Hardlinking directories in OSX~~](#hardlinking-directories-in-osx)
+  * [~~Post hardlink~~](#post-hardlink)
 
-### Post hardlink
-When we have hardlinked our directories we must also install Vundle to get
-the set up to work..
 
-# Installation
+### Vim
 
-## Plugin manager
-So run the following:
+I use Vim for my work and like so many I've over the years tailored my `.vimrc` into my very own. Even though it's meant for myself primarily I write this to help my future-self to get my environment set up and ready so that I can start working asap..
+
+#### Plugin manager
+
+So I've always used [Vundle](https://github.com/VundleVim/Vundle.vim) as my plugin manager and have no intention of changing. It works and does exactly what I need of it.
+
+
+##### To install Vundle
+
 > $ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-After Vundle has been installed, we must install the plugins defined in
-`.vim/config/plugins.vim`. Run either of the following to do so:
+##### Install plugins
+
+After [Vundle](https://github.com/VundleVim/Vundle.vim) has finished installing we can now install the plugins defined under `.vim/config/plugins.vim`.
 
 Launch `vim`and run `:PluginInstall`
 
@@ -23,21 +41,32 @@ or from the command line
 
 `vim +PluginInstall +qall`
 
-...and you'll have "magic"
+...and you'll have "mag
 
-## Color schemes
+
+### Karabiner Elements
+
+I use [Karabiner Elements](https://github.com/tekezo/Karabiner-Elements) to map
+Option + h/j/k/l to arrow keys. This to avoid context switching even further
+when having to hit those nasty-too-far-away keys and then find my way back to my
+beloved h, j, k and l.
+
+The config I use can be found under `.config/karabiner/karabiner.json`.
+
+### Color schemes
+
 I make use of the brilliant base16-shell for both the Shell itself but it also
-covers the vim part.
+covers the Vim part.
 
-https://github.com/chriskempson/base16-shell
+> https://github.com/chriskempson/base16-shell
 
-### Installation
+##### To install base16-shell
 
 ```
 https://github.com/chriskempson/base16-shell
 ```
 
-And the following should already be implemented in the .basrc file.
+And the following should already be added to the `.bashrc` file.
 
 ```
 BASE16_SHELL=$HOME/.config/base16-shell/
@@ -59,10 +88,9 @@ I use the following key mappings to make my life easier
 | ctrl-b + r     | cmd+r     | 0x02 0x52 | Re-runs last command in previous pane |
 | ctrl-b + ;     | cmd+s     | 0x02 0x3B | Switch to last pane |
 
-### Search using Ag
 
-#### Find trailing whitespace
-
+## Search using Ag
+### Find trailing whitespaces
 ```
 ag --no-multiline \\s+$
 
@@ -70,9 +98,7 @@ ag --no-multiline \\s+$
 cfdo %s/\v\s+$//ge | update
 ```
 
-
-
-#### Find whitespace of death
+### Find whitespaces of death
 
 ```
 ag --no-multiline  
@@ -80,3 +106,16 @@ ag --no-multiline  
 # Deal with all the findings
 cfdo %s/ / /ge | update
 ```
+
+## ~~Hardlinking directories in OSX~~
+
+> **Note** that this doesn't work anymore since High Sierra... Thanks Apple
+
+With the help of this git repo (`https://github.com/selkhateeb/hardlink`) we
+can hardlink directories, making actual directories source-able to Vim.
+
+### ~~Post hardlink~~
+
+When we have hardlinked our directories we must also install Vundle to get
+the set up to work..
+
