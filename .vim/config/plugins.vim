@@ -5,7 +5,6 @@ call vundle#begin()
     " Plugins
     Plugin 'vim-airline/vim-airline'
     Plugin 'scrooloose/nerdtree'
-    Plugin 'vim-syntastic/syntastic'
     Plugin 'jistr/vim-nerdtree-tabs'
     Plugin 'easymotion/vim-easymotion'
     Plugin 'tpope/vim-surround'
@@ -16,6 +15,10 @@ call vundle#begin()
     Plugin 'haya14busa/incsearch.vim'
     Plugin 'junegunn/vim-easy-align'
     Plugin 'scrooloose/nerdcommenter'
+
+    " linting
+    " Plugin 'vim-syntastic/syntastic'
+    Plugin 'w0rp/ale'
 
     " fuzzy finders
     Plugin 'junegunn/fzf'
