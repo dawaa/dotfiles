@@ -20,7 +20,6 @@ call vundle#begin()
     " fuzzy finders
     Plugin 'junegunn/fzf'
     Plugin 'junegunn/fzf.vim'
-    " Plugin 'ctrlpvim/ctrlp.vim'
 
     " YAML indent
     Plugin 'martin-svk/vim-yaml'
