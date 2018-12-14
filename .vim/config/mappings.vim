@@ -80,5 +80,3 @@ imap <A-Space> <Space>
 " Toggle Syntastic
 nnoremap <leader>lt :SyntasticToggleMode<cr>
 
-" disable auto-pairs move character mapping
-inoremap <buffer> ¨ <Nop>
