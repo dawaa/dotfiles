@@ -80,3 +80,5 @@ imap <A-Space> <Space>
 " Toggle Syntastic
 nnoremap <leader>lt :SyntasticToggleMode<cr>
 
+" filename completion
+inoremap <c-f> <c-x><c-f>
