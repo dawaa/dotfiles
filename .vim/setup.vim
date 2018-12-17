@@ -20,6 +20,7 @@ source $HOME/.vim/config/plugins/ultisnips.vim
 source $HOME/.vim/config/plugins/syntastic.vim
 source $HOME/.vim/config/plugins/nerdcommenter.vim
 source $HOME/.vim/config/plugins/airline.vim
+source $HOME/.vim/config/plugins/vim-easy-align.vim
 source $HOME/.vim/config/plugins/auto-pairs.vim
 
 " GUI
