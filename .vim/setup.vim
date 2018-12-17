@@ -25,7 +25,6 @@ source $HOME/.vim/config/plugins/auto-pairs.vim
 " GUI
 source $HOME/.vim/config/colorscheme.vim
 source $HOME/.vim/config/tabline.vim
-source $HOME/.vim/config/php.vim
 source $HOME/.vim/config/javascript.vim
 source $HOME/.vim/config/gitdiff.vim
 
