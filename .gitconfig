@@ -14,6 +14,7 @@
 	tool = vimdiff
 [difftool]
 	prompt = false
+    trustExitCode = true
 [merge]
 	tool = vimdiff
 [mergetool]
