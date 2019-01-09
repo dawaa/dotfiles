@@ -4,7 +4,7 @@ setlocal textwidth=72
 setlocal colorcolumn=+1
 setlocal colorcolumn+=51
 
-map <tab> <Plug>(incsearch-stay)<++>
+map <expr> <tab> (getline('.') =~ '<++>' ? '<Plug>(incsearch-stay)<++>' : '<Plug>(incsearch-forward)<++>')
 cmap <a-space> <cr>S
 
 exec "normal! O<++>\n\n<++>\n\n<++>\e^qaq"
