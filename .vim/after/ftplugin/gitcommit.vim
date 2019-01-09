@@ -14,3 +14,5 @@ silent! %s/\v^# On branch.*##(.*)##/\=setreg('a', submatch(1))/ne
 
 " Try replacing the third `<++>` with the unique identifier if one exists
 5s/<++>/\=len(getreg('a')) ? getreg('a') : '<++>'
+" Jump back to line no. 1
+1
