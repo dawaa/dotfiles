@@ -5,4 +5,4 @@ xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 vmap <leader>.: gaip<Right>:
-vmap <leader>.f gaip<C-X>from
+vmap <leader>.f gaip<C-X>from<CR>
