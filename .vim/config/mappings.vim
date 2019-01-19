@@ -21,7 +21,7 @@ nnoremap <leader>R :so ~/.vimrc<CR>
 
 " Last active tab
 let g:lasttab = 1
-nmap <leader><leader><Space> :exe "tabn ".g:lasttab<CR>
+nmap <leader><leader><Space> :b#<cr>
 au TabLeave * let g:lasttab = tabpagenr()
 
 " Quick n easy tab-switching prev/next
