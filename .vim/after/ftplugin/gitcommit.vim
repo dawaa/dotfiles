@@ -5,7 +5,8 @@ setlocal colorcolumn=+1
 setlocal colorcolumn+=51
 
 map <expr> <tab> (getline('.') =~ '<++>' ? '<Plug>(incsearch-stay)<++>' : '<Plug>(incsearch-forward)<++>')
-cmap <a-space> <cr>S
+cnoremap <expr> <space> (getline('.') =~ '<++>' ? '<cr>S' : '<space>')
+imap <c-j> <esc><Plug>(incsearch-forward)<++>
 
 exec "normal! O<++>\n\n<++>\n\n<++>\e^qaq"
 
