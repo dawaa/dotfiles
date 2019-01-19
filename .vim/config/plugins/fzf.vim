@@ -2,6 +2,7 @@
 nnoremap <leader>F :FZF!<cr>
 nnoremap <leader><Space>f :Ag<cr>
 nnoremap <leader><Space>F :Ag!<cr>
+nnoremap <leader>o :Buffers<cr>
 
 " [Buffers] Jump to the existing window if possible
 let g:fzf_buffers_jump = 1
