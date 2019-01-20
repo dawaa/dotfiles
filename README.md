@@ -3,6 +3,7 @@ Dotfiles
 
 ## Table of Contents
 * [Vim](#vim)
+  * [Gotchas](#gotchas)
   * [Plugin manager](#plugin-manager)
     * [To install Vundle](#to-install-vundle)
     * [Install plugins](#install-plugins)
@@ -21,6 +22,14 @@ Dotfiles
 ### Vim
 
 I use Vim for my work and like so many I've over the years tailored my `.vimrc` into my very own. Even though it's meant for myself primarily I write this to help my future-self to get my environment set up and ready so that I can start working asap..
+
+#### Gotchas
+
+Must run the following command below. Since I started using buffers I added a configuration setting that allows Vim to persist undo history between sessions. Where Vim will store that information is where we must create a directory before it can store it.
+
+```
+$ mkdir ~/.vim/undo
+```
 
 #### Plugin manager
 
