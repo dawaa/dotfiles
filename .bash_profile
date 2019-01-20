@@ -29,6 +29,7 @@ alias log-report='logGitReport'
 alias lgrep='lsGrep'
 alias ps-on-port='psOnPort'
 alias wip='git add . && git commit -m "wip"'
+alias rad='sudo killall coreaudiod'
 # alias skype='open -na /Applications/Skype.app --args -DataPath /Users/$(whoami)/Library/Application\ Support/Skype2'
 
 # Override OSX vim, even when future updates occur
