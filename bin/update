@@ -12,4 +12,5 @@ cp ~/.vimrc_background $cur_dir
 cp ~/.gitconfig $cur_dir
 cp ~/.gitignore $cur_dir
 cp ~/.gitignore_global $cur_dir
+cp ~/.ctags $cur_dir
 cp ~/.config/karabiner/karabiner.json $cur_dir/.config/karabiner/
