@@ -16,6 +16,9 @@ call vundle#begin()
     Plugin 'junegunn/vim-easy-align'
     Plugin 'scrooloose/nerdcommenter'
 
+    " Tags management
+    Plugin 'ludovicchabant/vim-gutentags'
+
     " linting
     " Plugin 'vim-syntastic/syntastic'
     Plugin 'w0rp/ale'
