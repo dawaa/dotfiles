@@ -1,10 +1,6 @@
 [[ -s ~/.bashrc ]] && source ~/.bashrc
 [[ -s ~/.bash_config ]] && source ~/.bash_config
 
-export MAMP_SQL=/Applications/MAMP/Library/bin
-export MAMP_PHP=/Applications/MAMP/bin/php/php7.1.1/bin
-export PATH=~/.composer/vendor/bin:$PATH
-
 alias h='cd'
 alias g='git'
 alias gs='git status'
@@ -41,7 +37,7 @@ PS1="[\u] \[\e[1;37m\]\W\[\e[0m\] "
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/opt/curl/bin:$PATH"
-export PATH="$PATH:$MAMP_SQL:$MAMP_PHP"
+export PATH=~/.composer/vendor/bin:$PATH
 export PHP_AUTOCONF=/usr/local/bin/autoconf
 export EDITOR=vim
 
