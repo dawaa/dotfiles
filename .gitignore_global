@@ -8,3 +8,4 @@ node_modules/
 .sass-cache
 .sash-cache/*
 tags
+tags.lock
