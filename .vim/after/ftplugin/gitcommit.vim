@@ -8,12 +8,18 @@ map <expr> <tab> (getline('.') =~ '<++>' ? '<Plug>(incsearch-stay)<++>' : '<Plug
 cnoremap <expr> <space> (getline('.') =~ '<++>' ? '<cr>S' : '<space>')
 imap <c-j> <esc><Plug>(incsearch-forward)<++>
 
-exec "normal! O<++>\n\n<++>\n\n<++>\e^qaq"
+function! AddPlaceholders()
+    if getline('.') !~ '[^\s]'
+        exec "normal! O<++>\n\n<++>\n\n<++>\e^qaq"
 
-" Try grabbing the unique identifier and place it in the 'a' register
-silent! %s/\v^# On branch.*##(.*)##/\=setreg('a', submatch(1))/ne
+        " Try grabbing the unique identifier and place it in the 'a' register
+        silent! %s/\v^# On branch.*##(.*)##/\=setreg('a', submatch(1))/ne
 
-" Try replacing the third `<++>` with the unique identifier if one exists
-5s/<++>/\=len(getreg('a')) ? getreg('a') : '<++>'
-" Jump back to line no. 1
-1
+        " Try replacing the third `<++>` with the unique identifier if one exists
+        5s/<++>/\=len(getreg('a')) ? getreg('a') : '<++>'
+        " Jump back to line no. 1
+        1
+    endif
+endfunction
+
+au BufWinEnter * call AddPlaceholders()
