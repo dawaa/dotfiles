@@ -48,6 +48,16 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+" Quick pane-resizing
+nnoremap <leader><C-J> 10<C-W>+
+nnoremap <leader><C-K> 10<C-W>-
+nnoremap <leader><C-H> 10<C-W>>
+nnoremap <leader><C-L> 10<C-W><
+
+" Quick create panes
+nnoremap <leader>% :vsplit<cr>
+nnoremap <leader>" :split<cr>
+
 " Disable the word-lookup functionality
 nnoremap K <Nop>
 
