@@ -16,6 +16,14 @@ call vundle#begin()
     Plugin 'junegunn/vim-easy-align'
     Plugin 'scrooloose/nerdcommenter'
 
+    " Writing plugins
+    "  Dependencies manager
+    Plugin 'vim-jp/vital.vim'
+    "  Testing framework
+    Plugin 'thinca/vim-themis'
+    "  To make System.Job available
+    Plugin 'lambdalisue/vital-Whisky'
+
     " Tags management
     Plugin 'ludovicchabant/vim-gutentags'
 
