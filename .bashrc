@@ -109,7 +109,15 @@ psOnPort() {
 }
 
 killOnPort() {
-    lsof -ti tcp:$1 | xargs kill -9
+    num_processes=$(lsof -ti tcp:$1 | wc -l | sed 's/ //g')
+
+    if [ "$num_processes" -eq 0 ]; then
+        echo "Nothing running on port: $1"
+    elif [ "$num_processes" -gt 0 ]; then
+        lsof -ti tcp:$1 | xargs kill -9
+        echo "Killed $num_processes process(es)"
+    fi
+
 }
 
 findRootSha() {
