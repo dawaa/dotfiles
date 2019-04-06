@@ -108,6 +108,10 @@ psOnPort() {
     lsof -i tcp:$1
 }
 
+killOnPort() {
+    lsof -ti tcp:$1 | xargs kill -9
+}
+
 findRootSha() {
     branch=$1
     current_branch=$(git rev-parse --abbrev-ref HEAD)
