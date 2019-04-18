@@ -16,6 +16,9 @@ call vundle#begin()
     Plugin 'junegunn/vim-easy-align'
     Plugin 'scrooloose/nerdcommenter'
 
+    " CoffeeScript syntax
+    Plugin 'kchmck/vim-coffee-script'
+
     " Writing plugins
     "  Dependencies manager
     Plugin 'vim-jp/vital.vim'
