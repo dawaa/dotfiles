@@ -34,7 +34,7 @@ export -f fzfGitFiles
 
 fzfGitBranches() {
     is_in_git_repo &&
-        git branch -a -vv --color=always |
+        git branch -a -vv --color=always --sort=committerdate |
         grep -v '/HEAD\s' |
         fzf --ansi --multi --tac |
         sed 's/^..//' |

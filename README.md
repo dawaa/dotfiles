@@ -57,7 +57,7 @@ or from the command line
 
 Some applications have made their way into my workflow and is listed below:
 
-- Git
+- Git (requires minimum version 2.7.0)
 - [Homebrew](https://brew.sh/)
 
 ### Karabiner Elements
