@@ -28,6 +28,7 @@ fzfGitFiles() {
     is_in_git_repo &&
         git -c color.status=always status --short |
         fzf -m --ansi --nth 2..,.. |
+        sort -d |
         awk '{print $2}'
 }
 export -f fzfGitFiles
