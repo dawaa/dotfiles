@@ -34,4 +34,6 @@ command! -bang -nargs=* Rg
 
 " Likewise, Files command with preview window
 command! -bang -nargs=? -complete=dir FZF
-  \ call fzf#vim#files(<q-args>, fzf#vim#with_preview('right:60%:hidden', '?'), <bang>0)
+  \ call fzf#vim#files(
+  \     <q-args>,
+  \     fzf#vim#with_preview('right:60%:hidden', '?'), <bang>0)
