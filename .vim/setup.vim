@@ -35,3 +35,4 @@ source $HOME/.vim/config/mappings.vim
 " Auto commands
 source $HOME/.vim/autocommands/nbsp.vim
 source $HOME/.vim/autocommands/nerdtree.vim
+source $HOME/.vim/autocommands/filetypedetect.vim
