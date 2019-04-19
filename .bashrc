@@ -27,8 +27,8 @@ is_in_git_repo() {
 fzfGitFiles() {
     is_in_git_repo &&
         git -c color.status=always status --short |
-        fzf -m --ansi --nth 2..,.. |
         sort -d |
+        fzf -m --ansi --nth 2..,.. --preview='(echo {} | sed "s/^ *//;s/$//" | cut -d" " -f2) | xargs -I {} bat --style=changes --color=always {}' |
         awk '{print $2}'
 }
 export -f fzfGitFiles
