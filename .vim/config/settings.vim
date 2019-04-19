@@ -56,3 +56,6 @@ set undodir=$HOME/.vim/undo
 
 set undolevels=1000
 set undoreload=10000
+
+" Allow to switch buffer even though current buffer has unsaved work.
+set hidden
