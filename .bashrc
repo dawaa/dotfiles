@@ -201,10 +201,11 @@ cs() {
 bind '"\C-r": "\C-x1\e^\er"'
 bind -x '"\C-x1": __fzf_history';
 
-bind '"\C-g\C-f": "$(fzfGitFiles)\e\C-e"'
-bind '"\C-g\C-g": "$(fzfGitBranches)\e\C-e"'
-bind '"\C-g\C-d": "$(fzfDockerContainers)\e\C-e"'
-bind '"\C-g\C-i": "$(fzfDockerImages)\e\C-e"'
+bind '"\er": redraw-current-line'
+bind '"\C-g\C-f": "$(fzfGitFiles)\e\C-e\er"'
+bind '"\C-g\C-g": "$(fzfGitBranches)\e\C-e\er"'
+bind '"\C-g\C-d": "$(fzfDockerContainers)\e\C-e\er"'
+bind '"\C-g\C-i": "$(fzfDockerImages)\e\C-e\er"'
 bind '"\C-g\C-h": "$(gh)\e\C-e\er"'
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
