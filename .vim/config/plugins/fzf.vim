@@ -1,7 +1,7 @@
 " Open FZF fuzzy finder in fullscreen
-nnoremap <leader>F :FZF!<cr>
-nnoremap <leader><Space>f :Ag<cr>
-nnoremap <leader><Space>F :Ag!<cr>
+nnoremap <leader>F :FZF<cr>
+nnoremap <leader><Space>f :Rg<cr>
+nnoremap <leader><Space>F :Rg!<cr>
 nnoremap <leader>o :Buffers<cr>
 nnoremap <leader>t :Tags<cr>
 
@@ -25,11 +25,12 @@ nnoremap <silent> <expr> <C-n> (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : ''
 " "
 " "   :Ag  - Start fzf with hidden preview window that can be enabled with '?' key
 " "   :Ag! - Start fzf in fullscreen and display the preview window above
-command! -bang -nargs=* Ag
-  \ call fzf#vim#ag(<q-args>,
-  \                 <bang>0 ? fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}, 'up:60%')
-  \                         : fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}, 'right:50%:hidden', '?'),
-  \                 <bang>0)
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \     'rg --column --line-number --hidden --ignore-case --no-heading --color=always '.shellescape(<q-args>), 1,
+  \     <bang>0 ? fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}, 'up:60%')
+  \             : fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}, 'right:50%:hidden', '?'),
+  \     <bang>0)
 
 " Likewise, Files command with preview window
 command! -bang -nargs=? -complete=dir FZF

@@ -64,6 +64,7 @@ Some applications have made their way into my workflow and is listed below:
 #### Homebrew
 
 - [sharkdp/bat](https://github.com/sharkdp/bat) `cat` with syntax highlighting basically.
+- [BurntSushi/ripgrep](https://github.com/BurntSushi/ripgrep) Harder, Better, Faster, Stronger (than `Ag`).
 
 ### Karabiner Elements
 
