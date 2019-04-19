@@ -7,6 +7,7 @@ Dotfiles
   * [Plugin manager](#plugin-manager)
     * [To install Vundle](#to-install-vundle)
     * [Install plugins](#install-plugins)
+* [Applications](#applications)
 * [Karabiner Elements](#karabiner-elements)
 * [Color schemes](#color-schemes)
   * [To install base16-shell](#to-install-base16-shell)
@@ -52,6 +53,12 @@ or from the command line
 
 ...and you'll have "mag
 
+### Applications
+
+Some applications have made their way into my workflow and is listed below:
+
+- Git
+- [Homebrew](https://brew.sh/)
 
 ### Karabiner Elements
 
