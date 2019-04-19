@@ -8,6 +8,7 @@ Dotfiles
     * [To install Vundle](#to-install-vundle)
     * [Install plugins](#install-plugins)
 * [Applications](#applications)
+    * [Homebrew](#homebrew)
 * [Karabiner Elements](#karabiner-elements)
 * [Color schemes](#color-schemes)
   * [To install base16-shell](#to-install-base16-shell)
@@ -59,6 +60,10 @@ Some applications have made their way into my workflow and is listed below:
 
 - Git (requires minimum version 2.7.0)
 - [Homebrew](https://brew.sh/)
+
+#### Homebrew
+
+- [sharkdp/bat](https://github.com/sharkdp/bat) `cat` with syntax highlighting basically.
 
 ### Karabiner Elements
 
