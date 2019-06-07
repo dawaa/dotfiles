@@ -28,6 +28,7 @@ alias wip='git add . && git commit -m "wip"'
 alias gap='git add -p'
 alias rad='sudo killall coreaudiod'
 alias sauce='source ~/.bash_profile'
+alias gro='git reset --hard origin/$(git rev-parse --abbrev-ref HEAD)'
 # alias skype='open -na /Applications/Skype.app --args -DataPath /Users/$(whoami)/Library/Application\ Support/Skype2'
 
 # Override OSX vim, even when future updates occur
