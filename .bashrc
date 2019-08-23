@@ -190,7 +190,7 @@ tm() {
 
 cs() {
     if [ "$BASE16_SHELL" ]; then
-        eval $(ls $BASE16_SHELL/scripts | sed 's/\..*$//g' | sed 's/-/_/' | fzf)
+        eval $(ls $BASE16_SHELL/scripts | sed 's/\..*$//g' | sed 's/-/_/' | fzf --no-multi --header "current: $BASE16_THEME")
     else
         echo "You seem to be missing the ENV variable \$BASE16_SHELL."
     fi
