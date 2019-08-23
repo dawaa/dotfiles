@@ -4,6 +4,7 @@
 alias h='cd'
 alias g='git'
 alias gs='git status'
+alias gsu='git status -u'
 alias gcm='git checkout master'
 alias gcl='git checkout -'
 alias gfix='git commit --fixup'
