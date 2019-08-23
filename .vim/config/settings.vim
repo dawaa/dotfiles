@@ -49,6 +49,12 @@ set backupskip=/tmp/*,/private/tmp/*
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set writebackup
 
+" Editing stuff in e.g. Docker containers breaks the symlink when done with Vim
+" as it changes the inode number upon save. Setting `backupcopy=auto` becomes
+" the middleground where Vim sees if it's possible to copy & rename without
+" side-effects, if not possible, it runs with the same inode.
+set backupcopy=yes
+
 " Persistent undo
 " Caveat: Must run `mkdir ~/.vim/undo`
 set undofile
