@@ -65,3 +65,8 @@ set undoreload=10000
 
 " Allow to switch buffer even though current buffer has unsaved work.
 set hidden
+
+" Allow vim to actually full-screen a pane without leaving
+" leaving current line only showing in the minized pane.
+" This however leaves only the filename still showing, which is nice.
+set wmh=0
