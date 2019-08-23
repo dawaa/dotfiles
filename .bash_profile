@@ -6,6 +6,7 @@ alias g='git'
 alias gs='git status'
 alias gsu='git status -u'
 alias gcm='git checkout master'
+alias gcmp='git checkout master && git pull'
 alias gcl='git checkout -'
 alias gfix='git commit --fixup'
 alias gbk='' # @TODO create script to create backup branches
