@@ -11,6 +11,7 @@ alias gcl='git checkout -'
 alias gfix='git commit --fixup'
 alias gbk='' # @TODO create script to create backup branches
 alias gri='git rebase -i'
+alias grc='git --no-pager diff --check --cached && git rebase --continue'
 alias grinas='git rebase -i --no-autosquash'
 alias ganc='findRootSha'
 alias gancm='findRootSha master'
