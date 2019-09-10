@@ -2,6 +2,10 @@ call vundle#begin()
     " let Vundle manage Vundle, required
     Plugin 'VundleVim/Vundle.vim'
 
+    " Plugin suite of autoloading functions, very nice
+    " and some other plugins might depend on this.
+    " Plugin 'LucHermitte/lh-vim-lib'
+
     " Plugins
     Plugin 'vim-airline/vim-airline'
     Plugin 'scrooloose/nerdtree'
