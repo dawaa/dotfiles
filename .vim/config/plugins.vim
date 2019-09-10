@@ -20,6 +20,8 @@ call vundle#begin()
     Plugin 'junegunn/vim-easy-align'
     Plugin 'scrooloose/nerdcommenter'
 
+    " Vimscript syntax
+    Plugin 'vim-jp/syntax-vim-ex'
     " CoffeeScript syntax
     Plugin 'kchmck/vim-coffee-script'
 
