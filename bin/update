@@ -1,8 +1,7 @@
 #!/bin/bash
 cur_dir=$(pwd)
 
-# Update .vim/ directory with everything from ~/.vim/
-cp -R ~/.vim/ $cur_dir/.vim/
+rsync -a --exclude "bundle" --exclude "undo" ~/.vim $cur_dir
 
 cp ~/.tmux.conf $cur_dir
 cp ~/.vimrc $cur_dir
@@ -13,4 +12,5 @@ cp ~/.gitconfig $cur_dir
 cp ~/.gitignore $cur_dir
 cp ~/.gitignore_global $cur_dir
 cp ~/.ctags $cur_dir
-cp ~/.config/karabiner/karabiner.json $cur_dir/.config/karabiner/
+mkdir -p $cur_dir/.config/karabiner \
+    && cp ~/.config/karabiner/karabiner.json $cur_dir/.config/karabiner/

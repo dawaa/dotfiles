@@ -20,6 +20,9 @@ call vundle#begin()
     Plugin 'junegunn/vim-easy-align'
     Plugin 'scrooloose/nerdcommenter'
 
+    " Bash testing syntax
+    Plugin 'aliou/bats.vim'
+
     " Vimscript syntax
     Plugin 'vim-jp/syntax-vim-ex'
     " CoffeeScript syntax
