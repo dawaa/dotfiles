@@ -17,8 +17,3 @@ source $HOME/.vim/config/gitdiff.vim
 
 " Mappings
 source $HOME/.vim/config/mappings.vim
-
-" Auto commands
-source $HOME/.vim/autocommands/nbsp.vim
-source $HOME/.vim/autocommands/nerdtree.vim
-source $HOME/.vim/autocommands/filetypedetect.vim
