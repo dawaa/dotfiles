@@ -8,9 +8,6 @@ nnoremap <leader>t :Tags<cr>
 " [Buffers] Jump to the existing window if possible
 let g:fzf_buffers_jump = 1
 
-" Prevent opening files in NERDTree
-nnoremap <silent> <expr> <C-n> (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":FZF\<cr>"
-
 " [Tags] Command to generate tags file
 " let g:fzf_tags_command = 'ctags -R'
 

@@ -10,16 +10,6 @@ source $HOME/.vim/config/settings.vim
 " Override
 source $HOME/.vim/config/ag.vim
 
-" Plugin settings
-source $HOME/.vim/config/plugins/fzf.vim
-source $HOME/.vim/config/plugins/nerdtree.vim
-source $HOME/.vim/config/plugins/ultisnips.vim
-source $HOME/.vim/config/plugins/syntastic.vim
-source $HOME/.vim/config/plugins/nerdcommenter.vim
-source $HOME/.vim/config/plugins/airline.vim
-source $HOME/.vim/config/plugins/vim-easy-align.vim
-source $HOME/.vim/config/plugins/auto-pairs.vim
-
 " GUI
 source $HOME/.vim/config/colorscheme.vim
 source $HOME/.vim/config/tabline.vim
