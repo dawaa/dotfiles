@@ -6,3 +6,5 @@ if filereadable(expand("~/.vim/setup.vim"))
     let g:loaded_vimrc = 1
     source ~/.vim/setup.vim
 endif
+
+runtime! mappings/*

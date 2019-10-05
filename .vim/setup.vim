@@ -4,9 +4,6 @@ source $HOME/.vim/config/plugins.vim
 source $HOME/.vim/config/leader.vim
 source $HOME/.vim/config/autocomplete.vim
 
-" Functions
-source $HOME/.vim/functions/searchwholeword.vim
-
 " General stuff
 source $HOME/.vim/config/settings.vim
 
