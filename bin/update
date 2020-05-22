@@ -14,3 +14,9 @@ cp ~/.gitignore_global $cur_dir
 cp ~/.ctags $cur_dir
 mkdir -p $cur_dir/.config/karabiner \
     && cp ~/.config/karabiner/karabiner.json $cur_dir/.config/karabiner/
+
+rtorrentrc_path="/tmp/thelad.io/rutorrent/config/rtorrent/rtorrent.rc"
+if [ -f "$rtorrentrc_path" ]; then
+    mkdir -p $cur_dir/rtorrent \
+        && cp $rtorrentrc_path $cur_dir/rtorrent/
+fi
