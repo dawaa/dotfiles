@@ -56,3 +56,6 @@ export FZF_DEFAULT_COMMAND='rg --files --hidden --glob !.git'
 
 # To activate nodenv upon each new shell instantiation
 eval "$(nodenv init -)"
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+
