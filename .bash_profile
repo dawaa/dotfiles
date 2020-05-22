@@ -38,7 +38,7 @@ alias gro='git reset --hard origin/$(git rev-parse --abbrev-ref HEAD)'
 alias vi=/usr/local/bin/vim
 alias vim=/usr/local/bin/vim
 
-PS1="[\u] \[\e[1;37m\]\W\[\e[0m\] "
+PS1="> \[\e[1;37m\]\W\[\e[0m\] "
 
 # Disable history expansion
 set +H
@@ -49,9 +49,13 @@ export PATH="/usr/local/opt/curl/bin:$PATH"
 export PATH=~/.composer/vendor/bin:$PATH
 export PHP_AUTOCONF=/usr/local/bin/autoconf
 export EDITOR=vim
+export LC_ALL=en_US.UTF-8
 
 export FZF_DEFAULT_OPTS="--no-mouse --height 50% -1 --reverse --multi --inline-info --preview='[[ \$(file --mime {}) =~ binary ]] && echo {} is a binary file || (bat --style=numbers --color=always {} || cat {}) 2> /dev/null | head -300' --preview-window='right:hidden:wrap' --bind='f3:execute(bat --style=numbers {} || less -f {}),ctrl-p:toggle-preview,ctrl-d:half-page-down,ctrl-u:half-page-up,ctrl-e:preview-down,ctrl-y:preview-up'"
 export FZF_DEFAULT_COMMAND='rg --files --hidden --glob !.git'
 
 # To activate nodenv upon each new shell instantiation
 eval "$(nodenv init -)"
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+

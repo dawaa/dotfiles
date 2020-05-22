@@ -19,6 +19,7 @@ call vundle#begin()
     Plugin 'haya14busa/incsearch.vim'
     Plugin 'junegunn/vim-easy-align'
     Plugin 'scrooloose/nerdcommenter'
+    Plugin 'markonm/traces.vim'
 
     " Bash testing syntax
     Plugin 'aliou/bats.vim'

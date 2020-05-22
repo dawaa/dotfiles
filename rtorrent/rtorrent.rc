@@ -1,0 +1,93 @@
+# Constants
+method.insert = cfg.basedir, private|const|string, (cat,"/config/rtorrent/")
+method.insert = cfg.downloads, private|const|string, (cat,"/downloads/incomplete/")
+method.insert = cfg.sessions, private|const|string, (cat,"/config/rtorrent/rtorrent_sess/")
+method.insert = cfg.logs, private|const|string, (cat,"/config/log/rtorrent/")
+
+# Logs
+log.open_file = "rtorrent", (cat, (cfg.logs), "rtorrent.log")
+log.add_output = "info", "rtorrent"
+log.add_output = "tracker_debug", "rtorrent"
+log.add_output = "debug", "rtorrent"
+# log.add_output = "peer_debug", "rtorrent"
+log.add_output = "error", "rtorrent"
+log.execute = (cat, (cfg.logs), "execute.log")
+
+execute2 = {sh,-c,/usr/bin/php7 /app/rutorrent/php/initplugins.php abc &}
+execute.nothrow = rm,/run/php/.rtorrent.sock
+network.scgi.open_local = /run/php/.rtorrent.sock
+schedule = socket_chmod,0,0,"execute=chmod,0660,/run/php/.rtorrent.sock"
+schedule = socket_chgrp,0,0,"execute=chgrp,abc,/run/php/.rtorrent.sock"
+
+# Set the numwant field sent to the tracker, which indicates how many peers we want.
+# A negative value disables this feature. Default: `-1` (`tracker_numwant`)
+trackers.numwant.set = 100
+
+throttle.min_peers.normal.set = 99
+throttle.max_peers.normal.set = 200
+throttle.max_uploads.set = 0
+throttle.global_down.max_rate.set_kb = 0
+throttle.global_up.max_rate.set_kb = 8500
+
+directory.default.set = (cat, (cfg.downloads))
+session.path.set = /config/rtorrent/rtorrent_sess
+
+schedule = low_diskspace,5,60,close_low_diskspace=100M
+
+network.bind_address.set = 0.0.0.0
+network.port_range.set = 51413-51413
+
+pieces.hash.on_completion.set = yes
+protocol.encryption.set = allow_incoming,try_outgoing,enable_retry
+encoding.add = UTF-8
+
+dht.mode.set = auto
+dht.port.set = 6881
+trackers.use_udp.set = 1
+protocol.pex.set = 1
+
+########################
+# Define functions
+########################
+### Helpers
+method.insert = d.data_path, simple, "if=(d.is_multi_file), (cat,(d.directory),/), (cat,(d.directory),/,(d.name))"
+### Move completed torrents
+method.insert = movecheck, simple, "and={d.complete=,d.custom=auto}"
+method.insert = movedir, simple,\
+    (cat,\
+    "d.directory.set=$argument.1=;",\
+    "execute=mv,-f,$argument.0=,$argument.1=;",\
+    "d.save_full_session=;",\
+    "d.delete_tied=")
+method.insert = movedir_verbose, simple,\
+    (cat,\
+    "print=\"ARGS == 0::\",(argument.0),\" 1::\",(argument.1);",\
+    "movedir=(argument.0),(argument.1)")
+method.set_key = event.download.finished, moveoncompletion, "branch={movecheck=,\"movedir_verbose=$d.data_path=,(d.custom, auto)\"}"
+
+########################
+# Watch directories
+########################
+schedule2 = watch_dir_music_japanese,5,5,\
+    ((load.start,\
+            /downloads/incoming/music/japanese/*.torrent,\
+            "d.custom1.set=music-japanese",\
+            "d.custom.set=auto,/music/"))
+schedule2 = watch_dir_anime_airing,5,5,\
+    ((load.start,\
+            /downloads/incoming/anime/airing/*.torrent,\
+            "d.custom1.set=anime-episodes",\
+            "d.custom.set=auto,/anime/"))
+schedule2 = watch_dir_anime_aired,5,5,\
+    ((load.start,\
+            /downloads/incoming/anime/aired/*.torrent,\
+            "d.custom1.set=anime",\
+            "d.custom.set=auto,/anime/"))
+schedule2 = watch_dir_anime_movie,5,5,\
+    ((load.start,\
+            /downloads/incoming/anime/movies/*.torrent,\
+            "d.custom1.set=anime-movie",\
+            "d.custom.set=auto,/anime/"))
+
+# Untie removed .torrent files
+schedule2 = watch_untied,5,5,((remove_untied))
