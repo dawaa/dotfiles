@@ -38,7 +38,7 @@ alias gro='git reset --hard origin/$(git rev-parse --abbrev-ref HEAD)'
 alias vi=/usr/local/bin/vim
 alias vim=/usr/local/bin/vim
 
-PS1="[\u] \[\e[1;37m\]\W\[\e[0m\] "
+PS1="> \[\e[1;37m\]\W\[\e[0m\] "
 
 # Disable history expansion
 set +H
