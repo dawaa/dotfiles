@@ -1,83 +1,76 @@
-call vundle#begin()
-    " let Vundle manage Vundle, required
-    Plugin 'VundleVim/Vundle.vim'
-
-    " Plugin suite of autoloading functions, very nice
+call plug#begin('~/.vim/bundle')
+    " Plug suite of autoloading functions, very nice
     " and some other plugins might depend on this.
-    " Plugin 'LucHermitte/lh-vim-lib'
+    " Plug 'LucHermitte/lh-vim-lib'
 
-    " Plugins
-    Plugin 'vim-airline/vim-airline'
-    Plugin 'scrooloose/nerdtree'
-    Plugin 'jistr/vim-nerdtree-tabs'
-    Plugin 'easymotion/vim-easymotion'
-    Plugin 'tpope/vim-surround'
-    Plugin 'jiangmiao/auto-pairs'
-    Plugin 'digitaltoad/vim-pug'
-    Plugin 'mileszs/ack.vim'
-    Plugin 'ntpeters/vim-better-whitespace'
-    Plugin 'haya14busa/incsearch.vim'
-    Plugin 'junegunn/vim-easy-align'
-    Plugin 'scrooloose/nerdcommenter'
-    Plugin 'markonm/traces.vim'
+    " Plugs
+    Plug 'vim-airline/vim-airline'
+    Plug 'scrooloose/nerdtree'
+    Plug 'jistr/vim-nerdtree-tabs'
+    Plug 'easymotion/vim-easymotion'
+    Plug 'tpope/vim-surround'
+    Plug 'jiangmiao/auto-pairs'
+    Plug 'digitaltoad/vim-pug'
+    Plug 'mileszs/ack.vim'
+    Plug 'ntpeters/vim-better-whitespace'
+    Plug 'haya14busa/incsearch.vim'
+    Plug 'junegunn/vim-easy-align'
+    Plug 'scrooloose/nerdcommenter'
+    Plug 'markonm/traces.vim'
 
     " Bash testing syntax
-    Plugin 'aliou/bats.vim'
+    Plug 'aliou/bats.vim'
 
     " Vimscript syntax
-    Plugin 'vim-jp/syntax-vim-ex'
+    Plug 'vim-jp/syntax-vim-ex'
     " CoffeeScript syntax
-    Plugin 'kchmck/vim-coffee-script'
+    Plug 'kchmck/vim-coffee-script'
 
     " Writing plugins
     "  Dependencies manager
-    Plugin 'vim-jp/vital.vim'
+    Plug 'vim-jp/vital.vim'
     "  Testing framework
-    Plugin 'thinca/vim-themis'
+    Plug 'thinca/vim-themis'
     "  To make System.Job available
-    Plugin 'lambdalisue/vital-Whisky'
+    Plug 'lambdalisue/vital-Whisky'
 
     " Tags management
-    Plugin 'ludovicchabant/vim-gutentags'
+    Plug 'ludovicchabant/vim-gutentags'
 
     " linting
-    " Plugin 'vim-syntastic/syntastic'
-    Plugin 'w0rp/ale'
+    " Plug 'vim-syntastic/syntastic'
+    Plug 'w0rp/ale'
 
     " fuzzy finders
-    Plugin 'junegunn/fzf'
-    Plugin 'junegunn/fzf.vim'
+    Plug 'junegunn/fzf'
+    Plug 'junegunn/fzf.vim'
 
     " YAML indent
-    Plugin 'martin-svk/vim-yaml'
+    Plug 'martin-svk/vim-yaml'
 
     " TypeScript syntax
-    Plugin 'Quramy/tsuquyomi'
-    Plugin 'leafgarland/typescript-vim'
-    " Plugin 'HerringtonDarkholme/yats.vim'
+    Plug 'Quramy/tsuquyomi'
+    Plug 'leafgarland/typescript-vim'
+    " Plug 'HerringtonDarkholme/yats.vim'
 
     " TypeScript React syntax
-    Plugin 'ianks/vim-tsx'
+    Plug 'ianks/vim-tsx'
 
     " Javascript with JSDoc
-    Plugin 'yuezk/vim-js'
+    Plug 'yuezk/vim-js'
 
     " Nice syntax highlightning for react
-    Plugin 'maxmellon/vim-jsx-pretty'
+    Plug 'maxmellon/vim-jsx-pretty'
 
     " UltiSnips
-    Plugin 'SirVer/ultisnips'
+    Plug 'SirVer/ultisnips'
 
     " LiveScript
-    Plugin 'gkz/vim-ls'
+    Plug 'gkz/vim-ls'
 
     " Color Schemes
-    Plugin 'chriskempson/base16-vim'
-    Plugin 'rhysd/vim-color-spring-night'
+    Plug 'chriskempson/base16-vim'
+    Plug 'rhysd/vim-color-spring-night'
     " When doing git diffs
-    Plugin 'albertorestifo/github.vim'
-call vundle#end()
-
-" This allows for locally setting options per file types
-filetype plugin indent on
-syntax on
+    Plug 'albertorestifo/github.vim'
+call plug#end()
