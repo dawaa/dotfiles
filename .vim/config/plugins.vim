@@ -60,11 +60,11 @@ call vundle#begin()
     Plugin 'ianks/vim-tsx'
 
     " Javascript with JSDoc
-    Plugin 'pangloss/vim-javascript'
     " Plugin 'othree/es.next.syntax.vim'
+    Plugin 'yuezk/vim-js'
 
     " Nice syntax highlightning for react
-    Plugin 'mxw/vim-jsx' " dependency: pangloss/vim-javascript
+    Plugin 'maxmellon/vim-jsx-pretty'
 
     " UltiSnips
     Plugin 'SirVer/ultisnips'
