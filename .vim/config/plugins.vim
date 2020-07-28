@@ -38,8 +38,7 @@ call plug#begin('~/.vim/bundle')
     Plug 'ludovicchabant/vim-gutentags'
 
     " linting
-    " Plug 'vim-syntastic/syntastic'
-    Plug 'w0rp/ale'
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
     " fuzzy finders
     Plug 'junegunn/fzf'
