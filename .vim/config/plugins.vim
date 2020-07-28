@@ -60,7 +60,6 @@ call vundle#begin()
     Plugin 'ianks/vim-tsx'
 
     " Javascript with JSDoc
-    " Plugin 'othree/es.next.syntax.vim'
     Plugin 'yuezk/vim-js'
 
     " Nice syntax highlightning for react
