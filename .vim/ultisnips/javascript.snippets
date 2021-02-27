@@ -7,7 +7,7 @@ console.log('$1', $1);
 endsnippet
 
 snippet fun "function" b
-function ${1:funcName}($2) {
+function ${1:funcName}($2) {
 	${3:// ...code}
 }
 endsnippet
@@ -24,43 +24,6 @@ snippet doc "add documentation" b
  */
 endsnippet
 
-snippet RE "create react element" b
-<$1>
-$2
-</$1>
-endsnippet
-
-snippet rc "create react class" b
-// external
-import React from 'react'
-
-class $1 extends React.Component {
-
-	render() {
-		return (
-
-		)
-	}
-
-}
-
-export default $1
-endsnippet
-
-snippet mdw "middleware" b
-const $1 = ({ dispatch, getState }) => next => action => {
-
-}
-
-export default $1
-endsnippet
-
-snippet cdm "component did mount" b
-componentDidMount() {
-	$1
-}
-endsnippet
-
 snippet rnp "return new promise" b
 return new Promise(function(resolve, reject) {
 
@@ -73,46 +36,8 @@ try {
 }
 endsnippet
 
-snippet nr "new reducer" b
-import {
-
-} from ''
-
-const $1 = (state = {}, action) => {
-	switch( action.type ) {
-
-		default:
-			return state;
-	}
-}
-
-export default $1
-endsnippet
-
-snippet ns "new saga" b
-// external
-import { call, put, select } from 'redux-saga/effects'
-import { takeEvery } from 'redux-saga'
-
-// internal
-import * as actions from '__redux__/actions/$2'
-import { getUser }  from '__redux__/reducers'
-
-export default function* root{$1:NameOfSaga}() {
-	$3
-}
-endsnippet
-
 snippet rr "require()" b
 const $2 = require('$1');
-endsnippet
-
-snippet < "one line component" b
-<$1 />
-endsnippet
-
-snippet pt "import PropTypes" b
-import PropTypes from 'prop-types';
 endsnippet
 
 snippet pe "process.exit(0)" b
