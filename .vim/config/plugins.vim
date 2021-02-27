@@ -78,4 +78,6 @@ call plug#begin('~/.vim/bundle')
     Plug 'rhysd/vim-color-spring-night'
     " When doing git diffs
     Plug 'albertorestifo/github.vim'
+    " Git commit messages
+    Plug 'dawaa/vim-ggcommit'
 call plug#end()
