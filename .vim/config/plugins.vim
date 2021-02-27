@@ -38,7 +38,7 @@ call plug#begin('~/.vim/bundle')
     Plug 'ludovicchabant/vim-gutentags'
 
     " linting
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 
     " fuzzy finders
     Plug 'junegunn/fzf'
