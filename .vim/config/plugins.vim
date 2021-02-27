@@ -29,6 +29,9 @@ call plug#begin('~/.vim/bundle')
     " Rust
     Plug 'rust-lang/rust.vim'
 
+    " Svelte
+    Plug 'evanleck/vim-svelte', {'branch': 'main'}
+
     " Writing plugins
     "  Dependencies manager
     Plug 'vim-jp/vital.vim'
