@@ -97,3 +97,13 @@ inoremap <c-f> <c-x><c-f>
 
 " Quickly re-select last shape rather than last _actual_ selection
 noremap gV `[v`]
+
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
