@@ -26,6 +26,9 @@ call plug#begin('~/.vim/bundle')
     " CoffeeScript syntax
     Plug 'kchmck/vim-coffee-script'
 
+    " Rust
+    Plug 'rust-lang/rust.vim'
+
     " Writing plugins
     "  Dependencies manager
     Plug 'vim-jp/vital.vim'
