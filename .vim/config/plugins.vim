@@ -32,6 +32,9 @@ call plug#begin('~/.vim/bundle')
     " Svelte
     Plug 'evanleck/vim-svelte', {'branch': 'main'}
 
+    " .mdx support
+    Plug 'jxnblk/vim-mdx-js'
+
     " Writing plugins
     "  Dependencies manager
     Plug 'vim-jp/vital.vim'
