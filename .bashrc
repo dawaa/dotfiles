@@ -214,3 +214,7 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
