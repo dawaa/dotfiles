@@ -33,12 +33,6 @@ PS1="> \[\e[1;37m\]\W\[\e[0m\] "
 set +H
 
 export BASH_SILENCE_DEPRECATION_WARNING=1
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-export PATH="/usr/local/sbin:$PATH"
-export PATH="/usr/local/opt/curl/bin:$PATH"
-export PATH=~/.composer/vendor/bin:$PATH
-export PHP_AUTOCONF=/usr/local/bin/autoconf
 export EDITOR=vim
 export LC_ALL=en_US.UTF-8
 
