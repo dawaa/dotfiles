@@ -32,6 +32,8 @@ PS1="> \[\e[1;37m\]\W\[\e[0m\] "
 # Disable history expansion
 set +H
 
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/opt/curl/bin:$PATH"
