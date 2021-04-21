@@ -5,9 +5,6 @@ Dotfiles
 * [Programs](#programs)
 * [Vim](#vim)
   * [Gotchas](#gotchas)
-  * [Plugin manager](#plugin-manager)
-    * [To install Vundle](#to-install-vundle)
-    * [Install plugins](#install-plugins)
 * [Karabiner Elements](#karabiner-elements)
 * [Color schemes](#color-schemes)
   * [To install base16-shell](#to-install-base16-shell)
@@ -16,8 +13,6 @@ Dotfiles
 * [Search using Ag](#search-using-ag)
   * [Find trailing whitespaces](#find-trailing-whitespaces)
   * [Find whitespaces of death](#find-whitespaces-of-death)
-* [~~Hardlinking directories in OSX~~](#hardlinking-directories-in-osx)
-  * [~~Post hardlink~~](#post-hardlink)
 
 
 ### Programs
@@ -45,27 +40,6 @@ Must run the following command below. Since I started using buffers I added a co
 ```
 $ mkdir ~/.vim/undo
 ```
-
-#### Plugin manager
-
-So I've always used [Vundle](https://github.com/VundleVim/Vundle.vim) as my plugin manager and have no intention of changing. It works and does exactly what I need of it.
-
-
-##### To install Vundle
-
-> $ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-
-##### Install plugins
-
-After [Vundle](https://github.com/VundleVim/Vundle.vim) has finished installing we can now install the plugins defined under `.vim/config/plugins.vim`.
-
-Launch `vim`and run `:PluginInstall`
-
-or from the command line
-
-`vim +PluginInstall +qall`
-
-...and you'll have "mag
 
 ### Karabiner Elements
 
@@ -129,16 +103,3 @@ ag --no-multiline  
 # Deal with all the findings
 cfdo %s/ / /ge | update
 ```
-
-## ~~Hardlinking directories in OSX~~
-
-> **Note** that this doesn't work anymore since High Sierra... Thanks Apple
-
-With the help of this git repo (`https://github.com/selkhateeb/hardlink`) we
-can hardlink directories, making actual directories source-able to Vim.
-
-### ~~Post hardlink~~
-
-When we have hardlinked our directories we must also install Vundle to get
-the set up to work..
-
