@@ -1,5 +1,13 @@
-[[ -s ~/.bashrc ]] && source ~/.bashrc
+if [ -f /etc/profile ]; then
+    PATH=""
+    source /etc/profile
+fi
+
+. ~/.profile
+. ~/.bashrc
 [[ -s ~/.bash_config ]] && source ~/.bash_config
+
+export PATH="$HOME/.cargo/bin:$PATH"
 
 alias h='cd'
 alias g='git'
@@ -40,5 +48,3 @@ export FZF_DEFAULT_OPTS="--no-mouse --height 50% -1 --reverse --multi --inline-i
 export FZF_DEFAULT_COMMAND='rg --files --hidden --glob !.git'
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
-
-export PATH="$HOME/.cargo/bin:$PATH"
