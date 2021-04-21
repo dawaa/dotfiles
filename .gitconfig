@@ -3,7 +3,7 @@
     email = alejandro@thelad.io
 [core]
     excludesfile = ~/.gitignore_global
-    editor = /usr/local/bin/vim
+    editor = vim
     ignorecase = true
 [push]
     followTags = true
