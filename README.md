@@ -2,13 +2,12 @@ Dotfiles
 ========================
 
 ## Table of Contents
+* [Programs](#programs)
 * [Vim](#vim)
   * [Gotchas](#gotchas)
   * [Plugin manager](#plugin-manager)
     * [To install Vundle](#to-install-vundle)
     * [Install plugins](#install-plugins)
-* [Applications](#applications)
-    * [Homebrew](#homebrew)
 * [Karabiner Elements](#karabiner-elements)
 * [Color schemes](#color-schemes)
   * [To install base16-shell](#to-install-base16-shell)
@@ -20,6 +19,20 @@ Dotfiles
 * [~~Hardlinking directories in OSX~~](#hardlinking-directories-in-osx)
   * [~~Post hardlink~~](#post-hardlink)
 
+
+### Programs
+
+These are useful programs that are part of my everyday workflow.
+
+Install
+- `brew install nvm`
+- `brew install tmux`
+- `brew install vim`
+- `brew install git`
+- `brew install fzf`
+- `brew install ripgrep`
+- [Vimac](https://vimacapp.com/) &mdash; adds Vimium-like hints to the macOS
+- [Cursorcerer](http://doomlaser.com/cursorcerer-hide-your-cursor-at-will/) &mdash; helps hiding the cursor after X seconds to increase focus
 
 ### Vim
 
@@ -53,18 +66,6 @@ or from the command line
 `vim +PluginInstall +qall`
 
 ...and you'll have "mag
-
-### Applications
-
-Some applications have made their way into my workflow and is listed below:
-
-- Git (requires minimum version 2.7.0)
-- [Homebrew](https://brew.sh/)
-
-#### Homebrew
-
-- [sharkdp/bat](https://github.com/sharkdp/bat) `cat` with syntax highlighting basically.
-- [BurntSushi/ripgrep](https://github.com/BurntSushi/ripgrep) Harder, Better, Faster, Stronger (than `Ag`).
 
 ### Karabiner Elements
 
