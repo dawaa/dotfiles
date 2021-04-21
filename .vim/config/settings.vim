@@ -70,3 +70,5 @@ set hidden
 " leaving current line only showing in the minized pane.
 " This however leaves only the filename still showing, which is nice.
 set wmh=0
+
+colorscheme deus
