@@ -24,7 +24,7 @@ Install
 - `brew install tmux`
 - `brew install vim`
 - `brew install git`
-- `brew install fzf`
+- `brew install fzf` &mdash; make sure key bindings are installed and sourced, `~/.fzf.bash`
 - `brew install ripgrep`
 - [Vimac](https://vimacapp.com/) &mdash; adds Vimium-like hints to the macOS
 - [Cursorcerer](http://doomlaser.com/cursorcerer-hide-your-cursor-at-will/) &mdash; helps hiding the cursor after X seconds to increase focus
