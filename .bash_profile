@@ -34,6 +34,7 @@ alias wip='git add -A && git commit -m "wip"'
 alias gap='git add -p'
 alias rad='sudo killall coreaudiod'
 alias gro='git reset --hard origin/$(git rev-parse --abbrev-ref HEAD)'
+alias dc='docker-compose'
 
 PS1="> \[\e[1;37m\]\W\[\e[0m\] "
 
