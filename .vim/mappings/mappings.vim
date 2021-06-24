@@ -99,6 +99,8 @@ inoremap <c-f> <c-x><c-f>
 noremap gV `[v`]
 
 nnoremap <silent> K :call <SID>show_documentation()<CR>
+nnoremap <silent> gd <Plug>(coc-definition)
+nnoremap <silent> gi <Plug>(coc-implementation)
 
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
