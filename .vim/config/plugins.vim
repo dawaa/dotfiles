@@ -17,6 +17,7 @@ call plug#begin('~/.vim/bundle')
     Plug 'junegunn/vim-easy-align'
     Plug 'scrooloose/nerdcommenter'
     Plug 'markonm/traces.vim'
+    Plug 'dawaa/vim-ggcommit'
 
     " Bash testing syntax
     Plug 'aliou/bats.vim'
