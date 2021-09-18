@@ -5,26 +5,18 @@ call plug#begin('~/.vim/bundle')
 
     " Plugs
     Plug 'scrooloose/nerdtree'
-    Plug 'jistr/vim-nerdtree-tabs'
-    Plug 'easymotion/vim-easymotion'
     Plug 'tpope/vim-surround'
     Plug 'jiangmiao/auto-pairs'
-    Plug 'digitaltoad/vim-pug'
-    Plug 'mileszs/ack.vim'
     Plug 'ntpeters/vim-better-whitespace'
     Plug 'haya14busa/incsearch.vim'
-    Plug 'junegunn/vim-easy-align'
     Plug 'scrooloose/nerdcommenter'
     Plug 'markonm/traces.vim'
-    Plug 'dawaa/vim-ggcommit'
 
     " Bash testing syntax
     Plug 'aliou/bats.vim'
 
     " Vimscript syntax
     Plug 'vim-jp/syntax-vim-ex'
-    " CoffeeScript syntax
-    Plug 'kchmck/vim-coffee-script'
 
     " Rust
     Plug 'rust-lang/rust.vim'
@@ -76,8 +68,7 @@ call plug#begin('~/.vim/bundle')
     " Color Schemes
     Plug 'wojciechkepka/vim-github-dark'
     Plug 'cormacrelf/vim-colors-github'
-    " When doing git diffs
-    Plug 'albertorestifo/github.vim'
+
     " Git commit messages
     Plug 'dawaa/vim-ggcommit'
 call plug#end()
