@@ -4,7 +4,6 @@ call plug#begin('~/.vim/bundle')
     " Plug 'LucHermitte/lh-vim-lib'
 
     " Plugs
-    Plug 'vim-airline/vim-airline'
     Plug 'scrooloose/nerdtree'
     Plug 'jistr/vim-nerdtree-tabs'
     Plug 'easymotion/vim-easymotion'
