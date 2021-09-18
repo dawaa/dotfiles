@@ -78,7 +78,6 @@ call plug#begin('~/.vim/bundle')
     Plug 'gkz/vim-ls'
 
     " Color Schemes
-    Plug 'chriskempson/base16-vim'
     Plug 'rhysd/vim-color-spring-night'
     Plug 'ajmwagar/vim-deus'
     " When doing git diffs

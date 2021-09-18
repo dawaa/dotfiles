@@ -10,9 +10,5 @@ hi Normal guibg=NONE ctermbg=NONE
 autocmd VimEnter * highlight LineNr guifg=#68899a guibg=#263238
 autocmd VimEnter * highlight CursorLineNr guifg=#FFFFFF guibg=#263238 gui=NONE
 
-if filereadable( expand( "~/.vimrc_background" ) )
-    let base16colorspace=256
-    source ~/.vimrc_background
-endif
 
 autocmd VimEnter * match Error /\%xA0/
