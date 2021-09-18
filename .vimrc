@@ -9,7 +9,7 @@ if filereadable(expand("~/.vim/setup.vim"))
     \ && !exists('g:loaded_vimrc')
     " Necessary to be off for cool VIM plugin things
     set nocompatible
-    let g:loaded_vimrc = 1
+    let g:vimrc_loaded = 1
     source ~/.vim/setup.vim
 endif
 
