@@ -73,9 +73,6 @@ call plug#begin('~/.vim/bundle')
     " UltiSnips
     Plug 'SirVer/ultisnips'
 
-    " LiveScript
-    Plug 'gkz/vim-ls'
-
     " Color Schemes
     Plug 'wojciechkepka/vim-github-dark'
     Plug 'cormacrelf/vim-colors-github'
