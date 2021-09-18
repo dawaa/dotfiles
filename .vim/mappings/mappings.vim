@@ -5,7 +5,7 @@ nmap <leader>w :w!<cr>
 nmap <leader>qq :q!<cr>
 
 " Fast open up vimrc in a new tab
-map <leader>vrc :tabe ~/.vimrc<cr>
+map <leader>vrc :e ~/.vimrc<cr>
 
 " Fast search
 nmap <leader><leader>f /
