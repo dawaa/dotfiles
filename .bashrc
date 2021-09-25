@@ -134,9 +134,9 @@ createBackupBranch() {
 
 if [[ $is_backup_branch == 1 ]] || [[ $have_backup_branches -gt 0 ]]; then
     if [[ "$current_branch" =~ (.*)_backup-[0-9]+$ ]]; then
-            orig_branch_name=${BASH_REMATCH[1]}
+            orig_branch_name="${BASH_REMATCH[1]}"
         elif [[ $have_backup_branches -gt 0 ]]; then
-            orig_branch_name=$current_branch
+            orig_branch_name="$current_branch"
         else
             echo "Couldn't create backup branch from: $current_branch"
         fi
@@ -151,8 +151,8 @@ if [[ $is_backup_branch == 1 ]] || [[ $have_backup_branches -gt 0 ]]; then
 
 
         if [[ "$latest_backup_no" =~ ^([0-9]+)$ ]]; then
-            latest_no=${BASH_REMATCH[1]}
-            bump=$(($latest_no + 1))
+            latest_no="${BASH_REMATCH[1]}"
+            bump="$(($latest_no + 1))"
             git checkout -b ${orig_branch_name}_backup-${bump}
         else
             echo "Couldn't get latest backup no from: $current_branch "
