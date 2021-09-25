@@ -128,7 +128,7 @@ findRootSha() {
 }
 
 createBackupBranch() {
-    current_branch=$(git rev-parse --abbrev-ref HEAD)
+    current_branch=$(git branch --show-current)
     is_backup_branch=$(echo "$current_branch" | grep -oc "_backup-[0-9]\+$")
     have_backup_branches=$(git branch | grep -c "${current_branch}_backup")
 
