@@ -95,6 +95,8 @@ nnoremap <leader>lt :SyntasticToggleMode<cr>
 " filename completion
 inoremap <c-f> <c-x><c-f>
 
+vmap <leader>f  <Plug>(coc-format-selected)
+
 " Quickly re-select last shape rather than last _actual_ selection
 noremap gV `[v`]
 
