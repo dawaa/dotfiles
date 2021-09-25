@@ -53,6 +53,9 @@ call plug#begin('~/.vim/bundle')
     Plug 'wojciechkepka/vim-github-dark'
     Plug 'cormacrelf/vim-colors-github'
 
+    " Window/Pane management
+    Plug 'blueyed/vim-diminactive'
+
     " Git commit messages
     Plug 'dawaa/vim-ggcommit'
 call plug#end()
