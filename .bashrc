@@ -132,7 +132,7 @@ createBackupBranch() {
     is_backup_branch=$(echo "$current_branch" | grep -oc "_backup-[0-9]\+$")
     have_backup_branches=$(git branch | grep -c "${current_branch}_backup")
 
-if [[ $is_backup_branch == 1 ]] || [[ $have_backup_branches -gt 0 ]]; then
+    if [[ $is_backup_branch == 1 ]] || [[ $have_backup_branches -gt 0 ]]; then
     if [[ "$current_branch" =~ (.*)_backup-[0-9]+$ ]]; then
             orig_branch_name="${BASH_REMATCH[1]}"
         elif [[ $have_backup_branches -gt 0 ]]; then
@@ -148,7 +148,6 @@ if [[ $is_backup_branch == 1 ]] || [[ $have_backup_branches -gt 0 ]]; then
                 | sort -n -r \
                 | head -n1
         )
-
 
         if [[ "$latest_backup_no" =~ ^([0-9]+)$ ]]; then
             latest_no="${BASH_REMATCH[1]}"
