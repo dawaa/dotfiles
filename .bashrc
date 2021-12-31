@@ -144,7 +144,7 @@ createBackupBranch() {
         latest_backup_no=$(
             git branch \
                 | grep "${orig_branch_name}_backup" \
-                | grep -o "[0-9]\+" \
+                | grep -o "[0-9]\+$" \
                 | sort -n -r \
                 | head -n1
         )
