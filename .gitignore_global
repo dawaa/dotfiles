@@ -7,5 +7,6 @@
 node_modules/
 .sass-cache
 .sash-cache/*
-tags
+/tags
 tags.lock
+tags.temp
