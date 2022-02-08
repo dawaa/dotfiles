@@ -1,3 +1,5 @@
 {
-  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true
+  "typescript.showUnused": false,
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
+  "svelte.ask-to-enable-ts-plugin": false
 }
