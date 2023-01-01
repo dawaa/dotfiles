@@ -29,6 +29,8 @@ Install
 - `brew install ctags` &mdash; for [`vim-gutentags`](https://github.com/ludovicchabant/vim-gutentags)
 - [Vimac](https://vimacapp.com/) &mdash; adds Vimium-like hints to the macOS
 - [Cursorcerer](http://doomlaser.com/cursorcerer-hide-your-cursor-at-will/) &mdash; helps hiding the cursor after X seconds to increase focus
+- Magnet
+- Wireguard
 
 ### Vim
 
