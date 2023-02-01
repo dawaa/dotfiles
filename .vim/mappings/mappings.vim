@@ -104,7 +104,7 @@ nnoremap <silent> K :call ShowDocumentation()<CR>
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
-nmap <leader>rn <Plug>(coc-rename) " Symbol renaming
+nmap <leader>rn <Plug>(coc-rename)
 
 function! ShowDocumentation()
   if CocAction('hasProvider', 'hover')
