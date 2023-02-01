@@ -10,28 +10,6 @@ determine_platform() {
     esac
 }
 
-gitBranchCopyName() {
-    branchname="$1";
-
-    git branch | grep $branchname | sed 's/ //g' | pbcopy
-    git checkout `pbpaste`
-}
-export -f gitBranchCopyName
-
-lsGrep() {
-    find="$1"
-
-    ls -l | grep $1
-}
-export -f lsGrep
-
-logGitReport() {
-    date="$1"
-
-    git log --date=short --since=$date --graph --pretty=format:'%Cred%h%Creset [%ad] -%C(yellow)%d%Creset %s' --abbrev-commit
-}
-export -f logGitReport
-
 is_in_git_repo() {
     git rev-parse HEAD > /dev/null 2>&1
 }
@@ -114,10 +92,6 @@ gh() {
 
 fzf-down() {
   fzf --height 60% "$@" --border
-}
-
-psOnPort() {
-    lsof -i tcp:$1
 }
 
 killOnPort() {
@@ -222,7 +196,6 @@ set +H
 PS1="> \[\e[1;37m\]\W\[\e[0m\] "
 
 alias h='cd'
-alias g='git'
 alias gs='git status'
 alias gsu='git status -u'
 alias gcm='git checkout master'
@@ -234,16 +207,9 @@ alias grc='git --no-pager diff --check --cached && git rebase --continue'
 alias grinas='git rebase -i --no-autosquash'
 alias gbit='$(createBackupBranch)'
 alias gbn='goToBackupOriginalBranch'
-alias lsd='ls -ld .[^.]*?'
 alias ..='cd ..'
 alias ...='cd ../../'
 alias ....='cd ../../../'
-alias gc='gitBranchCopyName'
-alias log-report='logGitReport'
-alias lgrep='lsGrep'
-alias ps-on-port='psOnPort'
 alias wip='git add -A && git commit -m "wip"'
-alias gap='git add -p'
-alias rad='sudo killall coreaudiod'
 alias gro='git reset --hard origin/$(git rev-parse --abbrev-ref HEAD)'
 alias dc='docker-compose'
