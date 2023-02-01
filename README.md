@@ -5,6 +5,7 @@ Dotfiles
 * [Programs](#programs)
 * [Vim](#vim)
   * [Gotchas](#gotchas)
+  * [CoC extensions](#coc-extensions)
 * [Karabiner Elements](#karabiner-elements)
 * [Color schemes](#color-schemes)
   * [To install base16-shell](#to-install-base16-shell)
@@ -43,6 +44,13 @@ Must run the following command below. Since I started using buffers I added a co
 ```
 $ mkdir ~/.vim/undo
 ```
+
+#### CoC extensions
+
+- `coc-highlight`
+- `coc-tsserver`
+- `coc-eslint`
+- `coc-json`
 
 ### Karabiner Elements
 
