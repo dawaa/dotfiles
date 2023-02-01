@@ -1,0 +1,30 @@
+#!/bin/bash
+REPO_DIR=$(pwd)
+TARGET=/tmp/dotfiles_restore
+
+mkdir -p $TARGET
+
+files_or_directories_to_restore=(
+    ".tmux.conf"
+    ".vimrc"
+    ".bashrc"
+    ".profile"
+    ".vimrc_background"
+    ".gitconfig"
+    ".gitignore"
+    ".gitignore_global"
+    ".vim"
+)
+
+for file_or_directory in ${files_or_directories_to_restore[@]}; do
+    path="$REPO_DIR/$file_or_directory"
+
+    if [ -d "$path" ]; then
+        rsync -a $path $TARGET
+        continue
+    fi
+
+    if [ -s "$path" ]; then
+        cp $path $TARGET
+    fi
+done
