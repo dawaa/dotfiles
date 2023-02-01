@@ -7,7 +7,6 @@ files_to_copy=(
     "$HOME/.tmux.conf"
     "$HOME/.vimrc"
     "$HOME/.bashrc"
-    "$HOME/.bash_profile"
     "$HOME/.profile"
     "$HOME/.vimrc_background"
     "$HOME/.gitconfig"

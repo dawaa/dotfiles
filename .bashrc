@@ -221,3 +221,34 @@ bind '"\C-g\C-h": "$(gh)\e\C-e\er"'
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
+# Disable history expansion
+set +H
+
+PS1="> \[\e[1;37m\]\W\[\e[0m\] "
+
+alias h='cd'
+alias g='git'
+alias gs='git status'
+alias gsu='git status -u'
+alias gcm='git checkout master'
+alias gcmp='git checkout master && git pull'
+alias gcl='git checkout -'
+alias gfix='git commit --fixup'
+alias gri='git rebase -i'
+alias grc='git --no-pager diff --check --cached && git rebase --continue'
+alias grinas='git rebase -i --no-autosquash'
+alias gbit='$(createBackupBranch)'
+alias gbn='goToBackupOriginalBranch'
+alias lsd='ls -ld .[^.]*?'
+alias ..='cd ..'
+alias ...='cd ../../'
+alias ....='cd ../../../'
+alias gc='gitBranchCopyName'
+alias log-report='logGitReport'
+alias lgrep='lsGrep'
+alias ps-on-port='psOnPort'
+alias wip='git add -A && git commit -m "wip"'
+alias gap='git add -p'
+alias rad='sudo killall coreaudiod'
+alias gro='git reset --hard origin/$(git rev-parse --abbrev-ref HEAD)'
+alias dc='docker-compose'
