@@ -3,15 +3,23 @@ cur_dir=$(pwd)
 
 rsync -a --exclude "bundle" --exclude "undo" ~/.vim $cur_dir
 
-cp ~/.tmux.conf $cur_dir
-cp ~/.vimrc $cur_dir
-cp ~/.bashrc $cur_dir
-cp ~/.bash_profile $cur_dir
-cp ~/.vimrc_background $cur_dir
-cp ~/.gitconfig $cur_dir
-cp ~/.gitignore $cur_dir
-cp ~/.gitignore_global $cur_dir
-cp ~/.ctags $cur_dir
+files_to_copy=(
+    "$HOME/.tmux.conf"
+    "$HOME/.vimrc"
+    "$HOME/.bashrc"
+    "$HOME/.bash_profile"
+    "$HOME/.profile"
+    "$HOME/.vimrc_background"
+    "$HOME/.gitconfig"
+    "$HOME/.gitignore"
+    "$HOME/.gitignore_global"
+    "$HOME/.ctags"
+)
+
+for file in ${files_to_copy[@]}; do
+    [[ -s "$file" ]] && cp $file "$curr"
+done
+
 mkdir -p $cur_dir/.config/karabiner \
     && cp ~/.config/karabiner/karabiner.json $cur_dir/.config/karabiner/
 
