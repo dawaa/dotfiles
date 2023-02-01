@@ -27,6 +27,8 @@ call plug#begin('~/.vim/bundle')
     """ React
     Plug 'ianks/vim-tsx' " TypeScript + React
     Plug 'maxmellon/vim-jsx-pretty' " Better syntax highlighting
+    """ PHP
+    Plug 'StanAngeloff/php.vim'
 
     " Writing plugins
     """ Dependencies manager
