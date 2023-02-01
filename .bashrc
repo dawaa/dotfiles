@@ -1,3 +1,15 @@
+determine_platform() {
+    case "$OSTYPE" in
+      solaris*) echo "SOLARIS" ;;
+      darwin*)  echo "OSX" ;;
+      linux*)   echo "LINUX" ;;
+      bsd*)     echo "BSD" ;;
+      msys*)    echo "WINDOWS" ;;
+      cygwin*)  echo "WINDOWS" ;;
+      *)        echo "UNKNOWN" ;;
+    esac
+}
+
 gitBranchCopyName() {
     branchname="$1";
 
