@@ -74,7 +74,7 @@ covers the Vim part.
 https://github.com/chriskempson/base16-shell
 ```
 
-And the following should already be added to the `.bashrc` file.
+And the following should already be added to the `.profile` file.
 
 ```
 BASE16_SHELL=$HOME/.config/base16-shell/
