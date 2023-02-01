@@ -16,7 +16,7 @@ files_to_copy=(
 )
 
 for file in ${files_to_copy[@]}; do
-    [[ -s "$file" ]] && cp $file "$curr"
+    [ -s "$file" ] && cp $file "$curr"
 done
 
 mkdir -p $cur_dir/.config/karabiner \
