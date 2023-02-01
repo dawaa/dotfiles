@@ -1,3 +1,11 @@
+if [ -f /etc/profile ]; then
+    PATH=""
+    source /etc/profile
+fi
+
+[[ -s ~/.bashrc ]] && source ~/.bashrc
+[[ -s ~/.bash_config ]] && source ~/.bash_config
+
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 export NVM_DIR="$HOME/.nvm"

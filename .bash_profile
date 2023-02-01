@@ -1,12 +1,3 @@
-if [ -f /etc/profile ]; then
-    PATH=""
-    source /etc/profile
-fi
-
-[[ -s ~/.bashrc ]] && source ~/.bashrc
-[[ -s ~/.profile ]] && source ~/.profile
-[[ -s ~/.bash_config ]] && source ~/.bash_config
-
 export PATH="$HOME/.cargo/bin:$PATH"
 
 alias h='cd'
