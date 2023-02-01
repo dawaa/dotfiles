@@ -219,8 +219,6 @@ bind '"\C-g\C-d": "$(fzfDockerContainers)\e\C-e\er"'
 bind '"\C-g\C-i": "$(fzfDockerImages)\e\C-e\er"'
 bind '"\C-g\C-h": "$(gh)\e\C-e\er"'
 
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
 # Disable history expansion
 set +H
 

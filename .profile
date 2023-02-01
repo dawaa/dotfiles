@@ -22,6 +22,7 @@ export FZF_DEFAULT_COMMAND='rg --files --hidden --glob !.git'
 [ -s "$HOME/.cargo/env" ] && \. "$HOME/.cargo/env"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 if [ "$platform" = "OSX" ]; then
     export BASH_SILENCE_DEPRECATION_WARNING=1
