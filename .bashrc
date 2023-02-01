@@ -206,9 +206,6 @@ cs() {
     fi
 }
 
-# [ -n "$BASH" ] && complete -F fzfDockerContainers -o default -o bashdefault doge
-
-# re-wrote the script above
 bind '"\C-r": "\C-x1\e^\er"'
 bind -x '"\C-x1": __fzf_history';
 
