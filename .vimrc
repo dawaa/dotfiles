@@ -5,8 +5,6 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-let g:OmniSharp_server_use_net6 = 1
-
 if filereadable(expand("~/.vim/setup.vim"))
     \ && !exists('g:loaded_vimrc')
     " Necessary to be off for cool VIM plugin things

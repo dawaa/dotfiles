@@ -29,8 +29,6 @@ call plug#begin('~/.vim/bundle')
     Plug 'maxmellon/vim-jsx-pretty' " Better syntax highlighting
     """ PHP
     Plug 'StanAngeloff/php.vim'
-    """ C#
-    Plug 'OmniSharp/omnisharp-vim'
 
     " Writing plugins
     """ Dependencies manager
