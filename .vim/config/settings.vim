@@ -71,5 +71,7 @@ set hidden
 " This however leaves only the filename still showing, which is nice.
 set wmh=0
 
+set belloff=all
+
 autocmd ColorScheme *
     \ hi CocUnusedHighlight ctermbg=NONE guibg=NONE guifg=#808080
