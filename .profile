@@ -30,7 +30,7 @@ if [ "$platform" = "OSX" ]; then
     test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 fi
 
-if [ "$platform" = "WINDOWS" ]; then
+if [ "$platform" = "LINUX" ]; then
     test -d /home/linuxbrew/.linuxbrew && \
         eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
