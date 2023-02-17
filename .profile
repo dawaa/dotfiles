@@ -1,12 +1,24 @@
-if [ -f /etc/profile ]; then
+determine_platform() {
+    case "$OSTYPE" in
+      solaris*) echo "SOLARIS" ;;
+      darwin*)  echo "OSX" ;;
+      linux*)   echo "LINUX" ;;
+      bsd*)     echo "BSD" ;;
+      msys*)    echo "WINDOWS" ;;
+      cygwin*)  echo "WINDOWS" ;;
+      *)        echo "UNKNOWN" ;;
+    esac
+}
+
+platform=$(determine_platform)
+
+if [ "$platform" = "OSX" ] && [ -f /etc/profile ]; then
     PATH=""
     source /etc/profile
 fi
 
 [ -s ~/.bashrc ] && source ~/.bashrc
 [ -s ~/.bash_config ] && source ~/.bash_config
-
-platform=$(determine_platform)
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"

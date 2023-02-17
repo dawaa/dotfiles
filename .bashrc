@@ -1,15 +1,3 @@
-determine_platform() {
-    case "$OSTYPE" in
-      solaris*) echo "SOLARIS" ;;
-      darwin*)  echo "OSX" ;;
-      linux*)   echo "LINUX" ;;
-      bsd*)     echo "BSD" ;;
-      msys*)    echo "WINDOWS" ;;
-      cygwin*)  echo "WINDOWS" ;;
-      *)        echo "UNKNOWN" ;;
-    esac
-}
-
 is_in_git_repo() {
     git rev-parse HEAD > /dev/null 2>&1
 }
