@@ -9,6 +9,7 @@ files_or_directories_to_restore=(
     ".vimrc"
     ".bashrc"
     ".profile"
+    ".inputrc"
     ".vimrc_background"
     ".gitconfig"
     ".gitignore"
