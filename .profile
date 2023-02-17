@@ -29,3 +29,8 @@ if [ "$platform" = "OSX" ]; then
     eval "$(/opt/homebrew/bin/brew shellenv)"
     test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 fi
+
+if [ "$platform" = "WINDOWS" ]; then
+    test -d /home/linuxbrew/.linuxbrew && \
+        eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+fi
