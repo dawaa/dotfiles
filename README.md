@@ -23,6 +23,7 @@ These are useful programs that are part of my everyday workflow.
 Install
 - `nvm` follow install instructions, https://github.com/nvm-sh/nvm
 - `brew install tmux`
+  - [Tmux Plugin Manager (tpm)](https://github.com/tmux-plugins/tpm) needs to be installed to install other plugins
 - `brew install vim`
 - `brew install git`
 - `brew install fzf` &mdash; make sure key bindings are installed and sourced, `~/.fzf.bash`
