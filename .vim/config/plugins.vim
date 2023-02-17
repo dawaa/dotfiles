@@ -11,6 +11,7 @@ call plug#begin('~/.vim/bundle')
     Plug 'haya14busa/incsearch.vim'
     Plug 'scrooloose/nerdcommenter'
     Plug 'markonm/traces.vim'
+    Plug 'vim-vdebug/vdebug'
 
     " Syntax
     Plug 'aliou/bats.vim' " Bash testing
