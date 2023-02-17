@@ -21,7 +21,7 @@ Dotfiles
 These are useful programs that are part of my everyday workflow.
 
 Install
-- `brew install nvm`
+- `nvm` follow install instructions, https://github.com/nvm-sh/nvm
 - `brew install tmux`
 - `brew install vim`
 - `brew install git`
