@@ -10,6 +10,10 @@ determine_platform() {
     esac
 }
 
+if [ -n "$IS_TMUX" ]; then
+    return 0
+fi
+
 platform=$(determine_platform)
 
 if [ "$platform" = "OSX" ] && [ -f /etc/profile ]; then
