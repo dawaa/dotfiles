@@ -15,6 +15,7 @@ if [ -n "$IS_TMUX" ]; then
 fi
 
 platform=$(determine_platform)
+export __OS_PLATFORM__="$platform"
 
 if [ "$platform" = "OSX" ] && [ -f /etc/profile ]; then
     PATH=""
