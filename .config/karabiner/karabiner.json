@@ -87,6 +87,165 @@
                                 "type": "basic"
                             }
                         ]
+                    },
+                    {
+                        "description": "RDP curly brackets OSX-style",
+                        "manipulators": [
+                            {
+                                "type": "basic",
+                                "from": {
+                                    "key_code": "8",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_shift",
+                                            "right_option"
+                                        ]
+                                    }
+                                },
+                                "to": {
+                                    "key_code": "7",
+                                    "modifiers": [
+                                        "right_option"
+                                    ]
+                                },
+                                "conditions": [
+                                    {
+                                        "type": "frontmost_application_if",
+                                        "bundle_identifiers": [
+                                            "^com\\.microsoft\\.rdc$",
+                                            "^com\\.microsoft\\.rdc\\.mac$",
+                                            "^com\\.microsoft\\.rdc\\.macos$",
+                                            "^com\\.microsoft\\.rdc\\.osx\\.beta$",
+                                            "^com\\.thinomenon\\.RemoteDesktopConnection$",
+                                            "^com\\.teamviewer\\.TeamViewer$",
+                                            "^com\\.vmware\\.horizon$"
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "basic",
+                                "from": {
+                                    "key_code": "9",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_shift",
+                                            "right_option"
+                                        ]
+                                    }
+                                },
+                                "to": {
+                                    "key_code": "0",
+                                    "modifiers": [
+                                        "right_option"
+                                    ]
+                                },
+                                "conditions": [
+                                    {
+                                        "type": "frontmost_application_if",
+                                        "bundle_identifiers": [
+                                            "^com\\.microsoft\\.rdc$",
+                                            "^com\\.microsoft\\.rdc\\.mac$",
+                                            "^com\\.microsoft\\.rdc\\.macos$",
+                                            "^com\\.microsoft\\.rdc\\.osx\\.beta$",
+                                            "^com\\.thinomenon\\.RemoteDesktopConnection$",
+                                            "^com\\.teamviewer\\.TeamViewer$",
+                                            "^com\\.vmware\\.horizon$"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "description": "RDP pipe, greater and less than signs OSX-style",
+                        "manipulators": [
+                            {
+                                "type": "basic",
+                                "from": {
+                                    "key_code": "grave_accent_and_tilde"
+                                },
+                                "to": {
+                                    "key_code": "non_us_backslash"
+                                },
+                                "conditions": [
+                                    {
+                                        "type": "frontmost_application_if",
+                                        "bundle_identifiers": [
+                                            "^com\\.microsoft\\.rdc$",
+                                            "^com\\.microsoft\\.rdc\\.mac$",
+                                            "^com\\.microsoft\\.rdc\\.macos$",
+                                            "^com\\.microsoft\\.rdc\\.osx\\.beta$",
+                                            "^com\\.thinomenon\\.RemoteDesktopConnection$",
+                                            "^com\\.teamviewer\\.TeamViewer$",
+                                            "^com\\.vmware\\.horizon$"
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "basic",
+                                "from": {
+                                    "key_code": "grave_accent_and_tilde",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_shift"
+                                        ]
+                                    }
+                                },
+                                "to": {
+                                    "key_code": "non_us_backslash",
+                                    "modifiers": [
+                                        "left_shift"
+                                    ]
+                                },
+                                "conditions": [
+                                    {
+                                        "type": "frontmost_application_if",
+                                        "bundle_identifiers": [
+                                            "^com\\.microsoft\\.rdc$",
+                                            "^com\\.microsoft\\.rdc\\.mac$",
+                                            "^com\\.microsoft\\.rdc\\.macos$",
+                                            "^com\\.microsoft\\.rdc\\.osx\\.beta$",
+                                            "^com\\.thinomenon\\.RemoteDesktopConnection$",
+                                            "^com\\.teamviewer\\.TeamViewer$",
+                                            "^com\\.vmware\\.horizon$"
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "basic",
+                                "from": {
+                                    "key_code": "7",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_option"
+                                        ]
+                                    }
+                                },
+                                "to": {
+                                    "key_code": "non_us_backslash",
+                                    "modifiers": [
+                                        "right_option"
+                                    ]
+                                },
+                                "conditions": [
+                                    {
+                                        "type": "frontmost_application_if",
+                                        "bundle_identifiers": [
+                                            "^com\\.microsoft\\.rdc$",
+                                            "^com\\.microsoft\\.rdc\\.mac$",
+                                            "^com\\.microsoft\\.rdc\\.macos$",
+                                            "^com\\.microsoft\\.rdc\\.osx\\.beta$",
+                                            "^com\\.thinomenon\\.RemoteDesktopConnection$",
+                                            "^com\\.teamviewer\\.TeamViewer$",
+                                            "^com\\.vmware\\.horizon$"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
                     }
                 ]
             },
