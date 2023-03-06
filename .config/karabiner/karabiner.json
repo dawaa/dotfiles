@@ -158,7 +158,7 @@
                         ]
                     },
                     {
-                        "description": "RDP pipe, greater and less than signs OSX-style",
+                        "description": "RDP pipe, greater and less than signs and @-sign OSX-style",
                         "manipulators": [
                             {
                                 "type": "basic",
@@ -226,6 +226,37 @@
                                 },
                                 "to": {
                                     "key_code": "non_us_backslash",
+                                    "modifiers": [
+                                        "right_option"
+                                    ]
+                                },
+                                "conditions": [
+                                    {
+                                        "type": "frontmost_application_if",
+                                        "bundle_identifiers": [
+                                            "^com\\.microsoft\\.rdc$",
+                                            "^com\\.microsoft\\.rdc\\.mac$",
+                                            "^com\\.microsoft\\.rdc\\.macos$",
+                                            "^com\\.microsoft\\.rdc\\.osx\\.beta$",
+                                            "^com\\.thinomenon\\.RemoteDesktopConnection$",
+                                            "^com\\.teamviewer\\.TeamViewer$",
+                                            "^com\\.vmware\\.horizon$"
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "basic",
+                                "from": {
+                                    "key_code": "backslash",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_option"
+                                        ]
+                                    }
+                                },
+                                "to": {
+                                    "key_code": "2",
                                     "modifiers": [
                                         "right_option"
                                     ]
