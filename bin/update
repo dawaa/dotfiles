@@ -9,6 +9,7 @@ files_to_copy=(
     "$HOME/.bashrc"
     "$HOME/.profile"
     "$HOME/.inputrc"
+    "$HOME/.npmrc"
     "$HOME/.vimrc_background"
     "$HOME/.gitconfig"
     "$HOME/.gitignore"

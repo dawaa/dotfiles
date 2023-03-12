@@ -10,6 +10,7 @@ files_or_directories_to_restore=(
     ".bashrc"
     ".profile"
     ".inputrc"
+    ".npmrc"
     ".vimrc_background"
     ".gitconfig"
     ".gitignore"
