@@ -1,0 +1,8 @@
+.git
+.npm
+.local
+.volta
+.cache
+.vim/bundle
+.config
+.tmux

@@ -15,6 +15,7 @@ files_or_directories_to_restore=(
     ".gitconfig"
     ".gitignore"
     ".gitignore_global"
+    ".rgignore"
     ".vim"
 )
 
