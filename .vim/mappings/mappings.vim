@@ -36,7 +36,7 @@ map <leader>tm :tabmove
 
 
 " NerdTree toggle
-map <C-n> :NERDTreeTabsToggle<CR>
+map <C-n> :NERDTreeToggle<CR>
 " ?
 nmap <silent> <A-Up> <C-w> k<CR>
 nmap <silent> <A-Down> <C-w> j<CR>
