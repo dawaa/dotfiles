@@ -1,4 +1,7 @@
 hyper - r : yabai -m space --rotate 90
+
+hyper - y : yabai --restart-service
+
 hyper - f : yabai -m window --toggle zoom-fullscreen
 hyper - w : yabai -m window --toggle zoom-parent
 
