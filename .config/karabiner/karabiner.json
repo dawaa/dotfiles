@@ -92,7 +92,20 @@
                         "description": "RDP curly brackets OSX-style",
                         "manipulators": [
                             {
-                                "type": "basic",
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.microsoft\\.rdc$",
+                                            "^com\\.microsoft\\.rdc\\.mac$",
+                                            "^com\\.microsoft\\.rdc\\.macos$",
+                                            "^com\\.microsoft\\.rdc\\.osx\\.beta$",
+                                            "^com\\.thinomenon\\.RemoteDesktopConnection$",
+                                            "^com\\.teamviewer\\.TeamViewer$",
+                                            "^com\\.vmware\\.horizon$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "8",
                                     "modifiers": {
@@ -108,9 +121,11 @@
                                         "right_option"
                                     ]
                                 },
+                                "type": "basic"
+                            },
+                            {
                                 "conditions": [
                                     {
-                                        "type": "frontmost_application_if",
                                         "bundle_identifiers": [
                                             "^com\\.microsoft\\.rdc$",
                                             "^com\\.microsoft\\.rdc\\.mac$",
@@ -119,12 +134,10 @@
                                             "^com\\.thinomenon\\.RemoteDesktopConnection$",
                                             "^com\\.teamviewer\\.TeamViewer$",
                                             "^com\\.vmware\\.horizon$"
-                                        ]
+                                        ],
+                                        "type": "frontmost_application_if"
                                     }
-                                ]
-                            },
-                            {
-                                "type": "basic",
+                                ],
                                 "from": {
                                     "key_code": "9",
                                     "modifiers": {
@@ -140,20 +153,7 @@
                                         "right_option"
                                     ]
                                 },
-                                "conditions": [
-                                    {
-                                        "type": "frontmost_application_if",
-                                        "bundle_identifiers": [
-                                            "^com\\.microsoft\\.rdc$",
-                                            "^com\\.microsoft\\.rdc\\.mac$",
-                                            "^com\\.microsoft\\.rdc\\.macos$",
-                                            "^com\\.microsoft\\.rdc\\.osx\\.beta$",
-                                            "^com\\.thinomenon\\.RemoteDesktopConnection$",
-                                            "^com\\.teamviewer\\.TeamViewer$",
-                                            "^com\\.vmware\\.horizon$"
-                                        ]
-                                    }
-                                ]
+                                "type": "basic"
                             }
                         ]
                     },
@@ -161,16 +161,8 @@
                         "description": "RDP pipe, greater and less than signs and @-sign OSX-style",
                         "manipulators": [
                             {
-                                "type": "basic",
-                                "from": {
-                                    "key_code": "grave_accent_and_tilde"
-                                },
-                                "to": {
-                                    "key_code": "non_us_backslash"
-                                },
                                 "conditions": [
                                     {
-                                        "type": "frontmost_application_if",
                                         "bundle_identifiers": [
                                             "^com\\.microsoft\\.rdc$",
                                             "^com\\.microsoft\\.rdc\\.mac$",
@@ -179,12 +171,33 @@
                                             "^com\\.thinomenon\\.RemoteDesktopConnection$",
                                             "^com\\.teamviewer\\.TeamViewer$",
                                             "^com\\.vmware\\.horizon$"
-                                        ]
+                                        ],
+                                        "type": "frontmost_application_if"
                                     }
-                                ]
+                                ],
+                                "from": {
+                                    "key_code": "grave_accent_and_tilde"
+                                },
+                                "to": {
+                                    "key_code": "non_us_backslash"
+                                },
+                                "type": "basic"
                             },
                             {
-                                "type": "basic",
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.microsoft\\.rdc$",
+                                            "^com\\.microsoft\\.rdc\\.mac$",
+                                            "^com\\.microsoft\\.rdc\\.macos$",
+                                            "^com\\.microsoft\\.rdc\\.osx\\.beta$",
+                                            "^com\\.thinomenon\\.RemoteDesktopConnection$",
+                                            "^com\\.teamviewer\\.TeamViewer$",
+                                            "^com\\.vmware\\.horizon$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "grave_accent_and_tilde",
                                     "modifiers": {
@@ -199,9 +212,11 @@
                                         "left_shift"
                                     ]
                                 },
+                                "type": "basic"
+                            },
+                            {
                                 "conditions": [
                                     {
-                                        "type": "frontmost_application_if",
                                         "bundle_identifiers": [
                                             "^com\\.microsoft\\.rdc$",
                                             "^com\\.microsoft\\.rdc\\.mac$",
@@ -210,12 +225,10 @@
                                             "^com\\.thinomenon\\.RemoteDesktopConnection$",
                                             "^com\\.teamviewer\\.TeamViewer$",
                                             "^com\\.vmware\\.horizon$"
-                                        ]
+                                        ],
+                                        "type": "frontmost_application_if"
                                     }
-                                ]
-                            },
-                            {
-                                "type": "basic",
+                                ],
                                 "from": {
                                     "key_code": "7",
                                     "modifiers": {
@@ -230,9 +243,11 @@
                                         "right_option"
                                     ]
                                 },
+                                "type": "basic"
+                            },
+                            {
                                 "conditions": [
                                     {
-                                        "type": "frontmost_application_if",
                                         "bundle_identifiers": [
                                             "^com\\.microsoft\\.rdc$",
                                             "^com\\.microsoft\\.rdc\\.mac$",
@@ -241,12 +256,10 @@
                                             "^com\\.thinomenon\\.RemoteDesktopConnection$",
                                             "^com\\.teamviewer\\.TeamViewer$",
                                             "^com\\.vmware\\.horizon$"
-                                        ]
+                                        ],
+                                        "type": "frontmost_application_if"
                                     }
-                                ]
-                            },
-                            {
-                                "type": "basic",
+                                ],
                                 "from": {
                                     "key_code": "backslash",
                                     "modifiers": {
@@ -261,9 +274,11 @@
                                         "right_option"
                                     ]
                                 },
+                                "type": "basic"
+                            },
+                            {
                                 "conditions": [
                                     {
-                                        "type": "frontmost_application_if",
                                         "bundle_identifiers": [
                                             "^com\\.microsoft\\.rdc$",
                                             "^com\\.microsoft\\.rdc\\.mac$",
@@ -272,12 +287,10 @@
                                             "^com\\.thinomenon\\.RemoteDesktopConnection$",
                                             "^com\\.teamviewer\\.TeamViewer$",
                                             "^com\\.vmware\\.horizon$"
-                                        ]
+                                        ],
+                                        "type": "frontmost_application_if"
                                     }
-                                ]
-                            },
-                            {
-                                "type": "basic",
+                                ],
                                 "from": {
                                     "key_code": "w",
                                     "modifiers": {
@@ -292,9 +305,11 @@
                                         "left_control"
                                     ]
                                 },
+                                "type": "basic"
+                            },
+                            {
                                 "conditions": [
                                     {
-                                        "type": "frontmost_application_if",
                                         "bundle_identifiers": [
                                             "^com\\.microsoft\\.rdc$",
                                             "^com\\.microsoft\\.rdc\\.mac$",
@@ -303,12 +318,10 @@
                                             "^com\\.thinomenon\\.RemoteDesktopConnection$",
                                             "^com\\.teamviewer\\.TeamViewer$",
                                             "^com\\.vmware\\.horizon$"
-                                        ]
+                                        ],
+                                        "type": "frontmost_application_if"
                                     }
-                                ]
-                            },
-                            {
-                                "type": "basic",
+                                ],
                                 "from": {
                                     "key_code": "t",
                                     "modifiers": {
@@ -323,9 +336,16 @@
                                         "left_control"
                                     ]
                                 },
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Hyper key",
+                        "manipulators": [
+                            {
                                 "conditions": [
                                     {
-                                        "type": "frontmost_application_if",
                                         "bundle_identifiers": [
                                             "^com\\.microsoft\\.rdc$",
                                             "^com\\.microsoft\\.rdc\\.mac$",
@@ -334,9 +354,29 @@
                                             "^com\\.thinomenon\\.RemoteDesktopConnection$",
                                             "^com\\.teamviewer\\.TeamViewer$",
                                             "^com\\.vmware\\.horizon$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
+                                "from": {
+                                    "apple_vendor_top_case_key_code": "keyboard_fn"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_shift",
+                                        "modifiers": [
+                                            "left_command",
+                                            "left_control",
+                                            "left_option"
                                         ]
                                     }
-                                ]
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "apple_vendor_top_case_key_code": "keyboard_fn"
+                                    }
+                                ],
+                                "type": "basic"
                             }
                         ]
                     }
@@ -354,7 +394,36 @@
                     },
                     "ignore": false,
                     "manipulate_caps_lock_led": true,
-                    "simple_modifications": []
+                    "simple_modifications": [],
+                    "treat_as_built_in_keyboard": false
+                },
+                {
+                    "disable_built_in_keyboard_if_exists": false,
+                    "fn_function_keys": [],
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "is_pointing_device": false,
+                        "product_id": 641,
+                        "vendor_id": 1452
+                    },
+                    "ignore": false,
+                    "manipulate_caps_lock_led": true,
+                    "simple_modifications": [],
+                    "treat_as_built_in_keyboard": false
+                },
+                {
+                    "disable_built_in_keyboard_if_exists": false,
+                    "fn_function_keys": [],
+                    "identifiers": {
+                        "is_keyboard": false,
+                        "is_pointing_device": true,
+                        "product_id": 641,
+                        "vendor_id": 1452
+                    },
+                    "ignore": true,
+                    "manipulate_caps_lock_led": false,
+                    "simple_modifications": [],
+                    "treat_as_built_in_keyboard": false
                 }
             ],
             "fn_function_keys": [
@@ -513,7 +582,36 @@
                 },
                 "rules": []
             },
-            "devices": [],
+            "devices": [
+                {
+                    "disable_built_in_keyboard_if_exists": false,
+                    "fn_function_keys": [],
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "is_pointing_device": false,
+                        "product_id": 641,
+                        "vendor_id": 1452
+                    },
+                    "ignore": false,
+                    "manipulate_caps_lock_led": true,
+                    "simple_modifications": [],
+                    "treat_as_built_in_keyboard": false
+                },
+                {
+                    "disable_built_in_keyboard_if_exists": false,
+                    "fn_function_keys": [],
+                    "identifiers": {
+                        "is_keyboard": false,
+                        "is_pointing_device": true,
+                        "product_id": 641,
+                        "vendor_id": 1452
+                    },
+                    "ignore": true,
+                    "manipulate_caps_lock_led": false,
+                    "simple_modifications": [],
+                    "treat_as_built_in_keyboard": false
+                }
+            ],
             "fn_function_keys": [
                 {
                     "from": {
