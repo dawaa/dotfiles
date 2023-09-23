@@ -62,26 +62,6 @@ beloved h, j, k and l.
 
 The config I use can be found under `.config/karabiner/karabiner.json`.
 
-### Color schemes
-
-I make use of the brilliant base16-shell for both the Shell itself but it also
-covers the Vim part.
-
-> https://github.com/chriskempson/base16-shell
-
-##### To install base16-shell
-
-```
-https://github.com/chriskempson/base16-shell
-```
-
-And the following should already be added to the `.profile` file.
-
-```
-BASE16_SHELL=$HOME/.config/base16-shell/
-[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
-```
-
 ## iTerm2 key-mappings
 
 I use the following key mappings to make my life easier
@@ -97,21 +77,3 @@ I use the following key mappings to make my life easier
 | ctrl-b + r     | cmd+r     | 0x02 0x52 | Re-runs last command in previous pane |
 | ctrl-b + ;     | cmd+s     | 0x02 0x3B | Switch to last pane |
 
-
-## Search using Ag
-### Find trailing whitespaces
-```
-ag --no-multiline \\s+$
-
-# Deal with all the findings
-cfdo %s/\v\s+$//ge | update
-```
-
-### Find whitespaces of death
-
-```
-ag --no-multiline  
-
-# Deal with all the findings
-cfdo %s/ / /ge | update
-```
