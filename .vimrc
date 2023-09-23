@@ -5,6 +5,16 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+let g:coc_global_extensions = [
+\  'coc-highlight',
+\  'coc-json',
+\  'coc-tsserver',
+\  'coc-eslint',
+\]
+" \  'coc-phpls'
+" \  'coc-prisma'
+" \  'coc-svelte'
+
 if filereadable(expand("~/.vim/setup.vim"))
     \ && !exists('g:loaded_vimrc')
     " Necessary to be off for cool VIM plugin things
