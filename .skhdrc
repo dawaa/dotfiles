@@ -30,6 +30,10 @@ hyper - d : yabai -m window --warp south
 
 hyper - x : $(yabai -m window $(yabai -m query --windows --window | jq -re ".id") --close)
 hyper - return : /Applications/iTerm.app/Contents/MacOS/iTerm2
+
+hyper - space : \
+  yabai -m window --toggle float; \
+  yabai -m window --toggle border
 hyper - m : yabai -m query --windows \
   | jq '.[] | select(."is-floating"==true) | .id' \
   | while read id; do yabai -m window $id --minimize; done \
