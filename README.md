@@ -29,7 +29,7 @@ Install
 - `brew install fzf` &mdash; make sure key bindings are installed and sourced, `~/.fzf.bash`
 - `brew install ripgrep`
 - `brew install ctags` &mdash; for [`vim-gutentags`](https://github.com/ludovicchabant/vim-gutentags)
-- [Vimac](https://vimacapp.com/) &mdash; adds Vimium-like hints to the macOS
+- ~[Vimac](https://vimacapp.com/) &mdash; adds Vimium-like hints to the macOS~ Will be replaced with [Homerow](https://www.homerow.app/) instead.
 - [Cursorcerer](http://doomlaser.com/cursorcerer-hide-your-cursor-at-will/) &mdash; helps hiding the cursor after X seconds to increase focus
 - Magnet
 - Wireguard
