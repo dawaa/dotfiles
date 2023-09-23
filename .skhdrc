@@ -28,7 +28,7 @@ hyper - e : yabai -m window --warp east
 hyper - u : yabai -m window --warp north
 hyper - d : yabai -m window --warp south
 
-hyper - x : $(yabai -m window $(yabai -m query --windows --window | jq -re ".id") --close)
+hyper - x : yabai -m window $(yabai -m query --windows --window | jq -re ".id") --close
 hyper - return : /Applications/iTerm.app/Contents/MacOS/iTerm2
 
 hyper - space : \
