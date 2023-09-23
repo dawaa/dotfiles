@@ -49,6 +49,9 @@ Must run the following command below. Since I started using buffers I added a co
 $ mkdir ~/.vim/undo
 ```
 
+Don't forget to also unbind the `fn` shortcut to open "Emoji & Symbols" under
+System Settings > Keyboard > Press (globe icon) key to: > "Do Nothing"
+
 #### CoC extensions
 
 - `coc-highlight`
