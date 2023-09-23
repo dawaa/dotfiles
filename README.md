@@ -89,3 +89,57 @@ I use the following key mappings to make my life easier
 ### Borderless
 
 Under Profiles > Window > Style, set it to "No Title Bar" and restart iTerm2.
+
+## Firefox
+
+I've used [SimpleFox](https://github.com/migueravila/SimpleFox) as foundation and made slight modifications to it.
+
+```css
+/* userContent.css */
+@-moz-document url("about:home"), url("about:newtab"), url("about:privatebrowsing"){
+  .search-inner-wrapper{ display: none !important; }
+}
+```
+
+and
+
+```css
+/* userChrome.css */
+.urlbarView {
+  /* display: none !important;*/
+}
+
+...
+
+.tabbrowser-tab:not([pinned]) .tab-icon-image {
+  filter: grayscale(75%);
+  /*opacity: 0 !important;
+  transition: 0.5s !important;
+  width: 0px !important;*/
+}
+
+#tabbrowser-tabs:not([movingtab])
+  > #tabbrowser-arrowscrollbox
+  > .tabbrowser-tab
+  > .tab-stack
+  > .tab-background[selected='true'] {
+  background: linear-gradient(90deg, rgba(254,115,34,1) 0%, rgba(255,237,74,1) 100%) !important;
+  border: 4px solid;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-image-slice: 1;
+  border-width: 2px;
+  border-image-source: linear-gradient(90deg, rgb(224, 13, 103) 0%, rgb(229, 18, 99) 65%, rgb(253, 203, 71) 100%);
+}
+
+#tabbrowser-tabs .tabbrowser-tab:is([selected]) {
+  text-shadow: 1px 1px 2px grey, 0 0 1px grey, 0 0 0.2px grey !important;
+}
+
+#tabbrowser-tabs .tabbrowser-tab:is([selected]) .tab-close-button {
+  color: black !important;
+}
+```
+
+![](./assets/firefox-screenshot.png)
