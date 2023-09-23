@@ -16,6 +16,8 @@ files_to_copy=(
     "$HOME/.gitignore_global"
     "$HOME/.rgignore"
     "$HOME/.ctags"
+    "$HOME/.yabairc"
+    "$HOME/.skhdrc"
 )
 
 for file in ${files_to_copy[@]}; do

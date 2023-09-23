@@ -1,0 +1,18 @@
+yabai -m config layout bsp
+
+yabai -m rule --add app="^Finder$" manage=off
+yabai -m rule --add app="^TextEdit$" manage=off
+yabai -m rule --add app="^KeePassXC$" manage=off
+yabai -m rule --add app="^Karabiner-Elements$" manage=off
+yabai -m rule --add app="^Karabiner-EventViewer$" manage=off
+yabai -m rule --add app="^Microsoft Remote Desktop$" manage=off
+yabai -m rule --add app="^Microsoft Teams$" manage=off
+yabai -m rule --add app="^Music$" manage=off
+yabai -m rule --add app="^Discord$" manage=off
+yabai -m rule --add app="^Email$" manage=off
+
+yabai -m config top_padding    25
+yabai -m config bottom_padding 25
+yabai -m config left_padding   25
+yabai -m config right_padding  25
+yabai -m config window_gap     25

@@ -11,6 +11,8 @@ files_or_directories_to_restore=(
     ".profile"
     ".inputrc"
     ".npmrc"
+    ".yabairc"
+    ".skhdrc"
     ".vimrc_background"
     ".gitconfig"
     ".gitignore"
