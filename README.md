@@ -123,22 +123,17 @@ and
   > .tabbrowser-tab
   > .tab-stack
   > .tab-background[selected='true'] {
-  background: linear-gradient(90deg, rgba(254,115,34,1) 0%, rgba(255,237,74,1) 100%) !important;
   border: 4px solid;
   border-top: 0;
   border-right: 0;
   border-left: 0;
   border-image-slice: 1;
   border-width: 2px;
-  border-image-source: linear-gradient(90deg, rgb(224, 13, 103) 0%, rgb(229, 18, 99) 65%, rgb(253, 203, 71) 100%);
+  border-image-source: linear-gradient(90deg, rgba(254,115,34,1) 0%, rgba(255,237,74,1) 100%) !important;
 }
 
 #tabbrowser-tabs .tabbrowser-tab:is([selected]) {
   text-shadow: 1px 1px 2px grey, 0 0 1px grey, 0 0 0.2px grey !important;
-}
-
-#tabbrowser-tabs .tabbrowser-tab:is([selected]) .tab-close-button {
-  color: black !important;
 }
 ```
 
