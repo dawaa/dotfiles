@@ -1,0 +1,14 @@
+[Unit]
+Description=Shark67 kmonad keyboard config
+After=network.target
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=5
+ExecStart=/home/jandro/.config/kmonad/shark67-startup
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target

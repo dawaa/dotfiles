@@ -1,0 +1,7 @@
+#!/bin/bash
+
+device_name="usb-05ac_2.4G_Dongle-event-kbd"
+
+if [[ -e "/dev/input/by-id/${device_name}" ]]; then
+  kmonad /home/jandro/.config/kmonad/shark67.kbd
+fi
