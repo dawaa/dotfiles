@@ -1,8 +1,10 @@
 #!/bin/bash
-REPO_DIR=$(pwd)
-TARGET="$HOME"
+set -euo pipefail
 
-mkdir -p $TARGET
+REPO_DIR=$(pwd)
+TARGET="${HOME}"
+
+mkdir -p "${TARGET}"
 
 files_or_directories_to_restore=(
     ".tmux.conf"
@@ -11,25 +13,26 @@ files_or_directories_to_restore=(
     ".profile"
     ".inputrc"
     ".npmrc"
-    ".yabairc"
-    ".skhdrc"
     ".vimrc_background"
     ".gitconfig"
     ".gitignore"
     ".gitignore_global"
     ".rgignore"
+    ".ctags"
+    ".yabairc"
+    ".skhdrc"
     ".vim"
 )
 
-for file_or_directory in ${files_or_directories_to_restore[@]}; do
-    path="$REPO_DIR/$file_or_directory"
+for file_or_directory in "${files_or_directories_to_restore[@]}"; do
+    path="${REPO_DIR}/${file_or_directory}"
 
     if [ -d "$path" ]; then
-        rsync -a $path $TARGET
+        rsync -a "${path}" "${TARGET}"
         continue
     fi
 
     if [ -s "$path" ]; then
-        cp $path $TARGET
+        cp "${path}" "${TARGET}"
     fi
 done

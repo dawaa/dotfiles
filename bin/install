@@ -1,6 +1,29 @@
 #!/bin/bash
-NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+set -euo pipefail
 
-xargs brew install < programs
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_DIR="$(dirname "${SCRIPT_DIR}")"
+PROGRAMS_FILE="${REPO_DIR}/programs"
 
+# Check if programs file exists
+if [ ! -f "${PROGRAMS_FILE}" ]; then
+    echo "Error: programs file not found at ${PROGRAMS_FILE}"
+    exit 1
+fi
+
+# Install Homebrew if not already installed
+if ! command -v brew &> /dev/null; then
+    echo "Installing Homebrew..."
+    NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+else
+    echo "Homebrew already installed, skipping..."
+fi
+
+# Install programs from programs file
+echo "Installing programs from ${PROGRAMS_FILE}..."
+xargs brew install < "${PROGRAMS_FILE}"
+
+# Create vim undo directory
 mkdir -p ~/.vim/undo
+
+echo "Installation complete!"

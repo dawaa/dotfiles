@@ -1,34 +1,39 @@
 #!/bin/bash
+set -euo pipefail
+
 cur_dir=$(pwd)
 
-rsync -a --exclude "bundle" --exclude "undo" ~/.vim $cur_dir
+rsync -a --exclude "bundle" --exclude "undo" ~/.vim "${cur_dir}"
 
 files_to_copy=(
-    "$HOME/.tmux.conf"
-    "$HOME/.vimrc"
-    "$HOME/.bashrc"
-    "$HOME/.profile"
-    "$HOME/.inputrc"
-    "$HOME/.npmrc"
-    "$HOME/.vimrc_background"
-    "$HOME/.gitconfig"
-    "$HOME/.gitignore"
-    "$HOME/.gitignore_global"
-    "$HOME/.rgignore"
-    "$HOME/.ctags"
-    "$HOME/.yabairc"
-    "$HOME/.skhdrc"
+    "${HOME}/.tmux.conf"
+    "${HOME}/.vimrc"
+    "${HOME}/.bashrc"
+    "${HOME}/.profile"
+    "${HOME}/.inputrc"
+    "${HOME}/.npmrc"
+    "${HOME}/.vimrc_background"
+    "${HOME}/.gitconfig"
+    "${HOME}/.gitignore"
+    "${HOME}/.gitignore_global"
+    "${HOME}/.rgignore"
+    "${HOME}/.ctags"
+    "${HOME}/.yabairc"
+    "${HOME}/.skhdrc"
 )
 
-for file in ${files_to_copy[@]}; do
-    [ -s "$file" ] && cp $file "$curr"
+for file in "${files_to_copy[@]}"; do
+    [ -s "$file" ] && cp "${file}" "${cur_dir}"
 done
 
-mkdir -p $cur_dir/.config/karabiner \
-    && cp ~/.config/karabiner/karabiner.json $cur_dir/.config/karabiner/
+karabiner_config="${HOME}/.config/karabiner/karabiner.json"
+if [ -f "$karabiner_config" ]; then
+    mkdir -p "${cur_dir}/.config/karabiner" \
+        && cp "${karabiner_config}" "${cur_dir}/.config/karabiner/"
+fi
 
 rtorrentrc_path="/tmp/thelad.io/rutorrent/config/rtorrent/rtorrent.rc"
 if [ -f "$rtorrentrc_path" ]; then
-    mkdir -p $cur_dir/rtorrent \
-        && cp $rtorrentrc_path $cur_dir/rtorrent/
+    mkdir -p "${cur_dir}/rtorrent" \
+        && cp "${rtorrentrc_path}" "${cur_dir}/rtorrent/"
 fi
