@@ -28,6 +28,8 @@ call plug#begin('~/.vim/bundle')
     """ React
     Plug 'ianks/vim-tsx' " TypeScript + React
     Plug 'maxmellon/vim-jsx-pretty' " Better syntax highlighting
+    """ Prisma
+    Plug 'pantharshit00/vim-prisma'
     """ PHP
     Plug 'StanAngeloff/php.vim'
 
