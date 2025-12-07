@@ -76,6 +76,9 @@ set belloff=all
 autocmd ColorScheme *
     \ hi CocUnusedHighlight ctermbg=NONE guibg=NONE guifg=#808080
 
+" Fix vim-diminactive colors after VimEnter (plugin loads first, then we override)
+autocmd VimEnter * call timer_start(100, { -> execute('hi ColorColumn ctermbg=234 guibg=#1c1c1c') })
+
 " Performance optimizations for large files
 " Limit syntax highlighting to first 500 columns (prevents slowdown on long lines)
 set synmaxcol=500
