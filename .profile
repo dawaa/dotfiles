@@ -31,6 +31,10 @@ export NVM_DIR="$HOME/.nvm"
 
 export EDITOR=vim
 
+# Make less search highlighting more visible (bright yellow on black - visible even with tmux bg colors)
+export LESS_TERMCAP_so=$'\e[01;33;40m'   # Start standout (search match) - bold yellow on black
+export LESS_TERMCAP_se=$'\e[0m'          # End standout
+
 export FZF_DEFAULT_OPTS="--no-mouse --height 50% -1 --reverse --multi --inline-info --preview='[[ \$(file --mime {}) =~ binary ]] && echo {} is a binary file || (bat --style=numbers --color=always {} || cat {}) 2> /dev/null | head -300' --preview-window='right:hidden:wrap' --bind='f3:execute(bat --style=numbers {} || less -f {}),ctrl-p:toggle-preview,ctrl-d:half-page-down,ctrl-u:half-page-up,ctrl-e:preview-down,ctrl-y:preview-up'"
 export FZF_DEFAULT_COMMAND='rg --files --hidden --glob !.git'
 
