@@ -1,2 +1,3 @@
 " Required
-" syntax enable
+syntax enable
+filetype plugin indent on

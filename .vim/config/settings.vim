@@ -75,3 +75,57 @@ set belloff=all
 
 autocmd ColorScheme *
     \ hi CocUnusedHighlight ctermbg=NONE guibg=NONE guifg=#808080
+
+" Performance optimizations for large files
+" Limit syntax highlighting to first 500 columns (prevents slowdown on long lines)
+set synmaxcol=500
+" Limit time spent on syntax highlighting (prevents hangs on complex syntax)
+set redrawtime=10000
+" Limit memory for pattern matching
+set maxmempattern=2000
+
+" Automatically disable features for large files (> 10MB)
+autocmd BufReadPre *
+    \ let f=getfsize(expand("<afile>"))
+    \ | if f > 10485760 || f == -2
+    \ | syntax off
+    \ | setlocal eventignore+=FileType
+    \ | setlocal noswapfile
+    \ | setlocal bufhidden=unload
+    \ | setlocal undolevels=-1
+    \ | echo "Large file detected - features disabled for performance"
+    \ | endif
+
+" Faster terminal performance
+set ttyfast
+
+" Search settings
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+" Better command-line completion
+set wildmenu
+set wildmode=longest:full,full
+
+" Show partial commands
+set showcmd
+
+" Keep cursor away from screen edges (better context)
+set scrolloff=5
+set sidescrolloff=5
+
+" More natural split behavior
+set splitbelow
+set splitright
+
+" Faster CoC updates (default 4000ms is too slow)
+set updatetime=300
+
+" Faster key mapping timeouts
+set timeoutlen=500
+set ttimeoutlen=10
+
+" Prevent screen jumping when signs appear/disappear
+set signcolumn=yes
