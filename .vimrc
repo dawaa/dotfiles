@@ -23,13 +23,15 @@ if filereadable(expand("~/.vim/setup.vim"))
     source ~/.vim/setup.vim
 endif
 
-" WSL yank support
-let s:clip = '/mnt/c/Windows/System32/clip.exe'
-if executable(s:clip)
-    augroup WSLYank
-        autocmd!
-        autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip, @0) | endif
-    augroup END
+" Enable OSC 52 clipboard in SSH sessions
+if !empty($SSH_TTY)
+  autocmd TextYankPost * call s:osc52_yank()
+
+  function! s:osc52_yank()
+    let text = join(v:event.regcontents, "\n")
+    let encoded = system('base64 -w0', text)
+    call writefile(["\x1b]52;c;" . encoded . "\x07"], '/dev/stderr', 'b')
+  endfunction
 endif
 
 if !exists('g:vdebug_options')
