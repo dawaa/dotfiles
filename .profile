@@ -10,7 +10,10 @@ determine_platform() {
     esac
 }
 
-if [ -n "$IS_TMUX" ]; then
+if [ -n "$TMUX" ]; then
+    case "$(uname -a)" in
+        *synology*|*Synology*) export TERM=xterm-256color ;;
+    esac
     return 0
 fi
 
