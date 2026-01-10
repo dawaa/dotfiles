@@ -73,7 +73,7 @@ The config I use can be found under `.config/karabiner/karabiner.json`.
 
 ## iTerm2 key-mappings
 
-I use the following key mappings to make my life easier
+I use the following key mappings to make my life easier. Under iTerm2 settings > Keys > Key Bindings
 
 ### Switching between panes
 
@@ -86,9 +86,26 @@ I use the following key mappings to make my life easier
 | ctrl-b + r     | cmd+r     | 0x02 0x52 | Re-runs last command in previous pane |
 | ctrl-b + ;     | cmd+s     | 0x02 0x3B | Switch to last pane |
 
-### Borderless
+### Borderless + transparency
 
 Under Profiles > Window > Style, set it to "No Title Bar" and restart iTerm2.
+Under Profiles > Window > Transparency, set to 44
+
+### Clipboard
+
+Under General > Selection > Check "Access: Applications in terminal may access clipboard"
+
+### No native fullscreen
+
+Under General > Window > Uncheck "Full screen: Native full screen windows"
+
+### Move focus to next window
+
+CMD-Space search for "Keyboard" and under "Keyboard Shortcuts..." go to "Keyboard" and find "Move foxus to next window", change to "CMD+<"
+
+### Remove "Show Emoji & Symbols" mapping
+
+CMD-Space search for "Keyboard" and look for "Press (globe icon) key to" and set that from "Show Emoji & Symbols" to "Do Nothing"
 
 ## Firefox
 
