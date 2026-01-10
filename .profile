@@ -10,7 +10,7 @@ determine_platform() {
     esac
 }
 
-if [ -n "$TMUX" ]; then
+if [ -n "$IS_TMUX" ]; then
     return 0
 fi
 
