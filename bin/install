@@ -33,6 +33,20 @@ fi
 
 echo "NOTE: Start tmux and press Ctrl-B I to install plugins"
 
+HOMEBREW_BASH="$(brew --prefix)/bin/bash"
+if [[ -x "$HOMEBREW_BASH" ]]; then
+    if ! grep -q "$HOMEBREW_BASH" /etc/shells; then
+        echo "Adding Homebrew bash to /etc/shells (requires sudo)..."
+        sudo sh -c "echo '$HOMEBREW_BASH' >> /etc/shells"
+    fi
+
+    if [[ "$SHELL" != "$HOMEBREW_BASH" ]]; then
+        echo "Setting Homebrew bash as default shell..."
+        chsh -s "$HOMEBREW_BASH"
+        echo "NOTE: Open a new terminal for changes to take effect"
+    fi
+fi
+
 # Create vim undo directory
 mkdir -p ~/.vim/undo
 
