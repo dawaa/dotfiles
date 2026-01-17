@@ -23,6 +23,16 @@ fi
 echo "Installing programs from ${PROGRAMS_FILE}..."
 xargs brew install < "${PROGRAMS_FILE}"
 
+TPM_DIR="${HOME}/.tmux/plugins/tpm"
+if [ ! -d "${TPM_DIR}" ]; then
+    echo "Installing tmux plugin manager..."
+    git clone https://github.com/tmux-plugins/tpm "${TPM_DIR}"
+else
+    echo "tmux plugin manager already installed, skipping..."
+fi
+
+echo "NOTE: Start tmux and press Ctrl-B I to install plugins"
+
 # Create vim undo directory
 mkdir -p ~/.vim/undo
 
