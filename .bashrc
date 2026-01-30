@@ -168,15 +168,17 @@ cs() {
     fi
 }
 
-bind '"\C-r": "\C-x1\e^\er"'
-bind -x '"\C-x1": __fzf_history';
+if [[ $- == *i* ]]; then
+    bind '"\C-r": "\C-x1\e^\er"'
+    bind -x '"\C-x1": __fzf_history';
 
-bind '"\er": redraw-current-line'
-bind '"\C-g\C-f": "$(fzfGitFiles)\e\C-e\er"'
-bind '"\C-g\C-g": "$(fzfGitBranches)\e\C-e\er"'
-bind '"\C-g\C-d": "$(fzfDockerContainers)\e\C-e\er"'
-bind '"\C-g\C-i": "$(fzfDockerImages)\e\C-e\er"'
-bind '"\C-g\C-h": "$(gh)\e\C-e\er"'
+    bind '"\er": redraw-current-line'
+    bind '"\C-g\C-f": "$(fzfGitFiles)\e\C-e\er"'
+    bind '"\C-g\C-g": "$(fzfGitBranches)\e\C-e\er"'
+    bind '"\C-g\C-d": "$(fzfDockerContainers)\e\C-e\er"'
+    bind '"\C-g\C-i": "$(fzfDockerImages)\e\C-e\er"'
+    bind '"\C-g\C-h": "$(gh)\e\C-e\er"'
+fi
 
 # Disable history expansion
 set +H
