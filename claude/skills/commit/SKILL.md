@@ -25,6 +25,11 @@ git log --oneline -5
 
 ## 3. Write the Commit Message
 
+**Read `STYLE.md` in this skill's directory first** — it captures the
+author's voice (subject-line habits, when a body is warranted, register).
+The rules below are the structural baseline; STYLE.md decides how the
+message actually sounds.
+
 Follow Tim Pope's commit message standard:
 
 ### Subject Line Rules
@@ -36,7 +41,7 @@ Follow Tim Pope's commit message standard:
 ### Body Rules (if needed)
 - **Separate from subject with a blank line**
 - **Wrap at 72 characters**
-- **Explain what and why, not how** - The code shows how; the message explains the reasoning
+- **Explain why, not what** - The diff shows what changed; the body carries the reasoning
 
 ### Good Subject Line Examples
 - `Fix memory leak in image processor`
