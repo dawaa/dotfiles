@@ -37,3 +37,11 @@ if [ -f "$rtorrentrc_path" ]; then
     mkdir -p "${cur_dir}/rtorrent" \
         && cp "${rtorrentrc_path}" "${cur_dir}/rtorrent/"
 fi
+
+# Claude Code global config — refresh only files already tracked in claude/ (see claude/README.md)
+(cd "${cur_dir}/claude" && find . -type f ! -name README.md) | while read -r rel; do
+    src="${HOME}/.claude/${rel#./}"
+    if [ -f "$src" ]; then
+        cp "$src" "${cur_dir}/claude/${rel#./}"
+    fi
+done
