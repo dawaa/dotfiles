@@ -10,6 +10,10 @@ sessions running inside this repo, which would double-register the hooks below.
 
 - `CLAUDE.md` — global operating instructions
 - `settings.json` — model, hooks, sandbox, statusline (no secrets; hook paths are absolute `/Users/jandro/...`)
+- `statusline.sh` — slim status line (model · ctx% · session cost · 5h quota + reset · weekly quota),
+  invoked as `bash ~/.claude/statusline.sh` from settings.json. Quotas come from the official
+  `rate_limits` stdin JSON; ctx% needs **ccusage** (`npm i -g ccusage`) and degrades to an inline
+  warning without it. Traffic-light thresholds (yellow 25% / red 40%) live in the `pct_color` calls.
 - `hooks/`
   - `claude-code-honcho-capture.sh` / `claude-code-honcho-enrich.sh` — Honcho memory capture/enrich on every prompt; read the API key at runtime from `~/.honcho/config.json` (NOT tracked — recreate it by hand)
   - `no-overwrite-vault.sh` — PreToolUse guard: blocks `Write` from overwriting existing Obsidian vault notes
