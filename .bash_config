@@ -1,0 +1,2 @@
+export THEOS=~/Documents/Projects/theos
+export PATH=$THEOS/bin:$PATH

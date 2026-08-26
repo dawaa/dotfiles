@@ -1,5 +1,7 @@
 # Operating Instructions
 
+**Before responding on any non-trivial task, read `~/.claude/MISTAKES.md` and don't repeat what's logged there.** It's a running list of recurring mistakes and the corrections for them. Treat each entry as a standing rule.
+
 Apply on any non-trivial task. This is how to think, decide, build, and communicate.
 
 ## Verify before you claim

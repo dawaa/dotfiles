@@ -9,6 +9,7 @@ sessions running inside this repo, which would double-register the hooks below.
 ## Contents
 
 - `CLAUDE.md` — global operating instructions
+- `MISTAKES.md` — recurring mistakes + corrections, with a `×N` recurrence counter per entry; `CLAUDE.md` requires reading it before any non-trivial task
 - `settings.json` — model, hooks, sandbox, statusline (no secrets; hook paths are absolute `/Users/jandro/...`)
 - `hooks/`
   - `claude-code-honcho-capture.sh` / `claude-code-honcho-enrich.sh` — Honcho memory capture/enrich on every prompt; read the API key at runtime from `~/.honcho/config.json` (NOT tracked — recreate it by hand)
@@ -17,11 +18,11 @@ sessions running inside this repo, which would double-register the hooks below.
 
 ## Skills not tracked here
 
-Matt Pocock's engineering skills (`grilling`, `tdd`, `teach`, `triage`, `to-prd`,
-`to-issues`, `domain-modeling`, `codebase-design`, `diagnosing-bugs`, `prototype`,
-`handoff`, `grill-me`, `grill-with-docs`, …) are installed as symlinks into
-`~/.claude/.agents/skills/`. Reinstall them with:
+Only hand-written skills live in `skills/`. Third-party ones are installed with
+`npx skills@latest add <repo>` into `~/.agents/skills/` and symlinked from
+`~/.claude/skills/`. Deliberately not tracked and not restored — whichever ones
+are still wanted can be re-added by hand; `~/.agents/.skill-lock.json` records
+what was installed and from where.
 
-```sh
-npx skills@latest add mattpocock/skills
-```
+`plex-debug` symlinks into `../nerds_lan/.claude/skills/plex-debug`, versioned in
+that repo.

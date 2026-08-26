@@ -55,3 +55,5 @@ if [ "$platform" = "LINUX" ]; then
     test -d /home/linuxbrew/.linuxbrew && \
         eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"

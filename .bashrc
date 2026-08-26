@@ -203,3 +203,40 @@ alias ....='cd ../../../'
 alias wip='git add -A && git commit -m "wip"'
 alias gro='git reset --hard origin/$(git rev-parse --abbrev-ref HEAD)'
 alias dc='docker-compose'
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+
+# --- firefox-mcp: launch Firefox for Claude Code's firefox-devtools MCP (--connect-existing) ---
+# Quits any running Firefox (launch flags are ignored while an instance is already up),
+# then relaunches your real profile with Marionette + remote debugging (BiDi) so the MCP
+# server can attach to your logged-in session.
+# WARNING: this sets navigator.webdriver=true and alters fingerprint signals, which can trip
+# bot detection (Cloudflare/Akamai). Quit & reopen Firefox normally when you're done.
+firefox-mcp() {
+    local ff="/Applications/Firefox.app/Contents/MacOS/firefox"
+    [[ -x "$ff" ]] || { echo "firefox-mcp: Firefox not found at $ff" >&2; return 1; }
+
+    if pgrep -x firefox >/dev/null 2>&1; then
+        echo "firefox-mcp: quitting running Firefox..."
+        osascript -e 'quit app "Firefox"' >/dev/null 2>&1
+        local i=0
+        while pgrep -x firefox >/dev/null 2>&1 && (( i < 10 )); do
+            sleep 1; i=$((i + 1))
+        done
+        if pgrep -x firefox >/dev/null 2>&1; then
+            echo "firefox-mcp: Firefox still running after 10s; close it manually and retry." >&2
+            return 1
+        fi
+    fi
+
+    echo "firefox-mcp: launching Firefox with Marionette + remote debugging (BiDi)..."
+    "$ff" --marionette --remote-debugging-port >/dev/null 2>&1 &
+    disown
+    echo "firefox-mcp: ready — Claude can now drive Firefox via the firefox-devtools MCP."
+    echo "firefox-mcp: when done, quit Firefox (Cmd+Q) and reopen normally to disable automation."
+}
+export -f firefox-mcp
+
+# Pi
+export PATH="/Users/jandro/.volta/tools/image/node/24.3.0/bin:$PATH"

@@ -1,5 +1,4 @@
 {
-  "model": "claude-fable-5[1m]",
   "hooks": {
     "UserPromptSubmit": [
       {
@@ -51,5 +50,6 @@
   "effortLevel": "high",
   "tui": "default",
   "skipDangerousModePermissionPrompt": true,
+  "theme": "dark",
   "agentPushNotifEnabled": true
 }

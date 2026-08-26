@@ -19,9 +19,9 @@ files_or_directories_to_restore=(
     ".gitignore_global"
     ".rgignore"
     ".ctags"
-    ".yabairc"
-    ".skhdrc"
+    ".bash_config"
     ".vim"
+    ".config"
 )
 
 for file_or_directory in "${files_or_directories_to_restore[@]}"; do

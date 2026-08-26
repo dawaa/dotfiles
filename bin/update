@@ -18,19 +18,25 @@ files_to_copy=(
     "${HOME}/.gitignore_global"
     "${HOME}/.rgignore"
     "${HOME}/.ctags"
-    "${HOME}/.yabairc"
-    "${HOME}/.skhdrc"
+    "${HOME}/.bash_config"
 )
 
 for file in "${files_to_copy[@]}"; do
     [ -s "$file" ] && cp "${file}" "${cur_dir}"
 done
 
-karabiner_config="${HOME}/.config/karabiner/karabiner.json"
-if [ -f "$karabiner_config" ]; then
-    mkdir -p "${cur_dir}/.config/karabiner" \
-        && cp "${karabiner_config}" "${cur_dir}/.config/karabiner/"
-fi
+xdg_config_files=(
+    "karabiner/karabiner.json"
+    "ccstatusline/settings.json"
+)
+
+for rel in "${xdg_config_files[@]}"; do
+    src="${HOME}/.config/${rel}"
+    if [ -f "$src" ]; then
+        mkdir -p "${cur_dir}/.config/$(dirname "$rel")" \
+            && cp "$src" "${cur_dir}/.config/${rel}"
+    fi
+done
 
 rtorrentrc_path="/tmp/thelad.io/rutorrent/config/rtorrent/rtorrent.rc"
 if [ -f "$rtorrentrc_path" ]; then
