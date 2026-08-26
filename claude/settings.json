@@ -29,7 +29,7 @@
   },
   "statusLine": {
     "type": "command",
-    "command": "npx -y ccstatusline",
+    "command": "bash ~/.claude/statusline.sh",
     "padding": 0
   },
   "enabledPlugins": {
@@ -47,7 +47,7 @@
       ]
     }
   },
-  "effortLevel": "high",
+  "effortLevel": "xhigh",
   "tui": "default",
   "skipDangerousModePermissionPrompt": true,
   "theme": "dark",
